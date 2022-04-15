@@ -1,0 +1,11 @@
+wp-app/
+wp-data/
+config/
+**/*.zip
+**/node_modules/
+**/dist/
+!./wp-app/wp-config.php
+
+src/themes/twentynineteen
+src/themes/twentytwenty
+src/themes/twentytwentyone
