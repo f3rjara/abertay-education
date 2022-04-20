@@ -1,36 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'fonts';
 
-$font_ubuntu : 'Ubuntu',  Helvetica, sans-serif;
-$font_dosis : 'Dosis',  Helvetica, sans-serif;
+$font_primary :  'TeX Gyre Adventor', Arial, sans-serif;
+$font_secondary : 'Source Sans Pro', sans-serif;
 
-// Colors 
-$theme_primary:#5AA8E6;
-$theme_secondary:      #018DFF;
-$theme_action: #030B1E;
+// Colors Primary
+$theme_red_01:#d11142;
+$theme_red_02:#E4184C;
+$theme_red_03:#EF3463;
+$theme_red_04:#F86D91;
+$theme_red_05:#FFB4C7;
 
-$white :#fff;
+$theme_mint_green_01: #3CABA4;
+$theme_mint_green_02: #3EBCB4;
+$theme_mint_green_03: #42CEC5;
+$theme_mint_green_04: #49E3D9;
+$theme_mint_green_05: #7FFAF2;
+
+$theme_purple_01: #422768;
+$theme_purple_02: #573287;
+$theme_purple_03: #693DA3;
+$theme_purple_04: #8146C8;
+$theme_purple_05: #BA8FED;
+
+$theme_hot_pink_01: #B1045E;
+$theme_hot_pink_02: #C01F73;
+$theme_hot_pink_03: #D33085;
+$theme_hot_pink_04: #EA5FA7;
+$theme_hot_pink_05: #F697C8;
+
+// Colors Secondary
+$theme_orange_01: #E15802;
+$theme_orange_02: #EB6B1A;
+$theme_orange_03: #F07A31;
+$theme_orange_04: #FA914F;
+$theme_orange_05: #FFBB90;
+
+$theme_green_01: #185E5A;
+$theme_green_02: #256460;
+$theme_green_03: #346A67;
+$theme_green_04: #4F7C7A;
+$theme_green_05: #72B0AD;
+
+// Neutral Tones
+$theme_black  : #2E2A2A;
+$theme_gray_02: #A4A4A4;
+$theme_gray_03: #D8D8D8;
+$theme_gray_04: #EEEEEE;
+$theme_gray_05: #F6F6F6;
+
 $black :#000;
+$white :#fff;
 
-h1, .title-h1, .tilte-primary {
-  font-family:  $font_ubuntu;
-  font-style:   normal;
-  font-weight:  bold;
-  font-size:    48px;
-  line-height:  120%;
+.hero-title {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   80px;
+  line-height: 70px;
   @media (max-width: 992px) { 
-    font-size:    32px;
-    line-height:  120%;
+    font-style: normal;
+    font-weight: 700;
+    font-size:   38px;
+    line-height: 40px;
   }
 }
 
-h2, .title-h2, .title-secondary {
-  font-family:  $font_ubuntu;
-  font-style:   normal;
-  font-weight:  bold;
-  font-size:    32px;
-  line-height:  120%;
+h1, .title-h1 {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   48px;
+  line-height: 53px;
   @media (max-width: 992px) { 
-    font-size:    28px;
-    line-height:  120%;
+    font-style: normal;
+    font-weight: 700;
+    font-size:   28px;
+    line-height: 31px;
+  }
+}
+
+h2, .title-h2 {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   38px;
+  line-height: 42px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   24px;
+    line-height: 26px;
+  }
+}
+
+h3, .title-h3 {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   28px;
+  line-height: 31px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   22px;
+    line-height: 24px;
+  }
+}
+
+h4, .title-h4 {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   24px;
+  line-height: 37px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   18px;
+    line-height: 28px;
+  }
+}
+
+h5, .title-h5 {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   20px;
+  line-height: 31px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   16px;
+    line-height: 25px;
+  }
+}
+
+h6, .title-h6 {
+  font-family: $font_primary;
+  font-style:  normal;
+  font-weight: 700;
+  font-size:   18px;
+  line-height: 28px;
+  @media (max-width: 992px) { 
+    font-style: normal;
+    font-weight: 700;
+    font-size:   18px;
+    line-height: 28px;
+  }
+}
+
+p, a, span, li, ul, div {
+  font-family:  $font_secondary;
+  font-style:   normal;
+  font-weight:  400;
+  font-size:    18px;
+  line-height:  26px;
+  &.text-p2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &.text-p3 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &.text-bold {
+    font-style:   normal;
+    font-weight:  700;
+    font-size:    18px;
+    line-height:  26px;
+    &.text-p2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.text-p3 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &.text-italic {
+    font-style:   italic;
+    font-weight:  400;
+    font-size:    18px;
+    line-height:  23px;
+    &.text-p2 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.text-p3 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &.caption-regular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    &.text-bold {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: $theme_hot_pink_02;
   }
 }
