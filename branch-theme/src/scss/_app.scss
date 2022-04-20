@@ -115,3 +115,78 @@
 .theme_gray_05_text {color: $theme_gray_05; }
 .black_text { color: $black; }
 .white_text { color: $white; }
+
+
+.btn, input {
+  &:active, &:focus {
+    box-shadow: none;
+  }
+}
+
+// BUTTON IN SITE
+.btn-abertay {
+  background-color: $theme_hot_pink_01;
+  border-radius: 2px;
+  padding: 6px 16px;
+  color: $white;
+  font-family: $font_primary;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 2px;
+  &:hover {
+    background-color: $theme_hot_pink_05;
+    color: $white;
+  }
+  &:active {
+    background-color:$theme_hot_pink_03;
+    color: $white;
+  }
+
+  &.btn-abertay-medium {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &.btn-abertay-small {
+    font-family: $font_secondary;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &.btn-abertay-green {
+    background-color: $theme_mint_green_01;
+    &:hover {
+      background-color: $theme_mint_green_03;
+      color: $white;
+    }
+    &:active {
+      background-color:$theme_mint_green_02;
+      color: $white;
+    }
+  }
+
+  &.btn-abertay-outline {
+    background-color: transparent;
+    border: 1px solid $theme_mint_green_01;
+    color: $theme_mint_green_01;
+    &:hover {
+      background-color: $theme_mint_green_03;
+      color: $white;
+    }
+    &:active {
+      background-color:$theme_mint_green_02;
+      color: $white;
+    }
+  }
+}
+
+// Padding for Section 
+
+.py-abertay {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}

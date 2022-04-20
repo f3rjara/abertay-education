@@ -1,3 +1,4 @@
+import { scrollFunction } from './global/_header';
 
 function theme_mode() {
   return document.querySelector('body').classList.contains('developmet-mode') ? 'developmet-mode' : 'production-mode';
@@ -5,5 +6,9 @@ function theme_mode() {
 
 window.onload = function () {
   console.log('Theme Ready');
-  theme_mode();
+  theme_mode(); 
+};
+
+window.onscroll = function( ) {
+  //scrollFunction();
 };

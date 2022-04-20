@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'fonts';
 
-$font_primary : 'Ubuntu',  Helvetica, sans-serif;
-$font_secondary : 'Dosis',  Helvetica, sans-serif;
+$font_primary :  'TeX Gyre Adventor', Arial, sans-serif;
+$font_secondary : 'Source Sans Pro', sans-serif;
 
 // Colors Primary
 $theme_red_01:#d11142;
