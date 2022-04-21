@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row row-content-footer">
       <!-- COL SOCIAL MEDIA -->
-      <div class="col-12 col-lg-5 order-4 order-lg-1 col-social-media">
+      <div class="col-12 col-lg-4 order-4 order-lg-1 col-social-media">
         <ul class="list-social">
           <?php  // Loop through rows.
             while( have_rows('abertay_repeater_social_link', 'options') ) : the_row();
@@ -32,7 +32,7 @@
       </div>
 
       <!-- COL CONTACT DETAILS -->
-      <div class="col-12 col-lg-2 col-contact order-3">
+      <div class="col-12 col-lg-3 col-contact order-3">
         <h5>Contact Details</h5>
         <ul class="list-contact">
           <?php  // Loop through rows.
