@@ -1,0 +1,172 @@
+.main-footer {
+  background-color: $theme_black;
+  color: $white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width:992px) {
+    padding-bottom: 60px;
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-y: top;
+  }
+  .row-content-footer{
+    margin-bottom: 20px;
+
+    .col-social-media {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      @media screen and (max-width:992px) {
+        justify-content: center;
+      }
+      .list-social {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: start;
+        .list-item {
+          margin: 0 8px;
+          text-align: center;
+          min-width: 40px;
+          min-height: 40px;
+          background-color: $theme_green_05;
+          border-radius: 50%;
+          &:hover {
+            background-color: $theme_hot_pink_02;
+          }
+          .link-item {
+            color: $white;
+            font-size: 29px;
+            line-height: 40px;
+            margin: auto;
+            display: block;
+            i {
+              transform: translateY(2px);
+              display: contents;
+              font-size: 25px;
+            }
+          }
+        }
+        @media screen and (max-width:992px) {
+          justify-content: center;
+        }
+      }
+    }
+
+    .col-helpful {
+      .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        .menu-item {
+          padding-right: 1em;
+          a {
+            font-family: $font_secondary;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            &:hover {
+              color: $theme_hot_pink_04;
+            }
+          }
+          @media screen and (max-width:992px) { 
+            padding-right: 0em;
+            padding-bottom: 5px;
+          }
+        }
+        @media screen and (max-width:992px) { 
+          text-align: center;
+        }
+      }
+      @media screen and (max-width:992px) { 
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+
+    .col-contact {
+      .list-contact {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .list-item {
+          margin-bottom: 10px;
+          &.is_link {
+            a {
+              color: $white;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              &:hover {
+                color: $theme_hot_pink_04;
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width:992px) { 
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .row-terms {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid $theme_gray_02;
+    .col-menu-terms{
+      .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        .menu-item {
+          padding-right: 1em;
+          a {
+            font-family: $font_secondary;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: $white;
+            &:hover {
+              color: $theme_hot_pink_04;
+            }
+          }
+          @media screen and (max-width:992px) { 
+            padding-right: 0em;
+            padding-bottom: 5px;
+          }
+        }
+        @media screen and (max-width:992px) { 
+          flex-direction: column;
+          text-align: center;;
+        }
+      }
+    }
+    .col-copy {
+      text-align: end;
+      span {
+        font-family: $font_secondary;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $white;
+      }
+      @media screen and (max-width:992px) {
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+  }
+
+}

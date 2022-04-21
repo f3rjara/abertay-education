@@ -32,16 +32,21 @@ function scrollFunction() {
 }
 
 function nabvar_movil() {
-  let button_mobile = document.querySelector('.navbar-toggle-abertay');
-  let McButton = document.querySelector('.McButton');
+  let button_mobile = document.querySelectorAll('.navbar-toggle-abertay');
+  let McButton = document.querySelectorAll('.McButton');
   let navbar_collapse_abertay = document.querySelector('.navbar-collapse-abertay');
 
   if (button_mobile) {
-    button_mobile.addEventListener('click', function () {
-      console.log(navbar_collapse_abertay);
-      McButton.classList.toggle('active');
-      navbar_collapse_abertay.classList.toggle('navbar-collapse-is-show');
+    button_mobile.forEach( button => {
+      button.addEventListener('click', function () {
+        console.log(navbar_collapse_abertay);
+        McButton.forEach( isMcButton => {
+          isMcButton.classList.toggle('active');
+        });
+        navbar_collapse_abertay.classList.toggle('navbar-collapse-is-show');
+      });
     });
+    
   }
 }
 

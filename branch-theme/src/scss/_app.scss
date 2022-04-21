@@ -9,21 +9,22 @@
  /* width */
 ::-webkit-scrollbar {
   width: 15px;
+  background: $theme_black;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background: $theme_green_01;
+  background: $theme_black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $theme_black; 
+  background: $theme_hot_pink_01; 
   border-radius: 10px;
-  border: 4px solid $theme_green_01;
+  border: 4px solid $theme_black;
   &:hover {
-    background: $theme_black; 
+    background: $theme_hot_pink_03;
   }
 }
 
@@ -181,7 +182,6 @@
 }
 
 // Padding for Section 
-
 .py-abertay {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -190,3 +190,5 @@
     padding-bottom: 35px;
   }
 }
+
+main {  min-height: 85vh; }

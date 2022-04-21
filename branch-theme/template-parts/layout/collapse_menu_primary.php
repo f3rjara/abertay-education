@@ -3,7 +3,13 @@ $menu_primary = wp_get_menu_array('menu-branch-primary');
 ?>
 
 <div class="navbar-collapse navbar-collapse-abertay">
+
   <div class="container-primary-menu">
+
+    <button class="navbar-toggle-abertay" type="button" aria-label="Toggle navigation">
+      <div class="McButton"> <b></b> <b></b> <b></b> </div>
+    </button>
+
     <ul class="navbar-nav navbar-nav-primary ">
       <?php foreach ($menu_primary as $key => $nav_item_primary) : ?>
         <?php
