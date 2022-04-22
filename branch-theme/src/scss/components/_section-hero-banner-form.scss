@@ -3,6 +3,7 @@
   min-height: 768px;
   position: relative;
   overflow: hidden;
+
   .container-image {
     padding: 0;
     .picture-content {
@@ -36,5 +37,50 @@
   .container-content {
     z-index: 100;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    @media (max-width: 992px) { 
+      padding-top: 100px;
+    }
+
+    .col-titles-banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .primary-title {
+        margin-bottom: 30px;
+        @media screen and (max-width:992px) {
+          margin-bottom: 15px;
+        }
+      }
+      .subtitle-title {
+        margin-bottom: 20px;
+        @media screen and (max-width:992px) {
+          margin-bottom: 15px;
+        }
+      }
+      .list-features {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .list-item {
+          margin-bottom: 8px;
+          span {
+            line-height: 30px;
+            font-weight: 700;
+            font-family: $font_primary;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+    .min-content {
+      min-width: 420px;
+      @media (max-width: 992px) { 
+        min-width: initial;
+      }
+    }
   }
 }
