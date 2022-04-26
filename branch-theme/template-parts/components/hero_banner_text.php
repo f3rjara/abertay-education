@@ -1,29 +1,26 @@
 <?php
-  $sub_hero_banner_form = get_sub_field('sub_hero_banner_form');
+  $sub_hero_banner_text = get_sub_field('sub_hero_banner_text');
   /* CONFIGURATION SECTION */
-  $hidden_section = $sub_hero_banner_form['visible_section'] ? 'd-none' : 'd-block';
-  $id_section = $sub_hero_banner_form['id_section'];
-  $class_custom_section = $sub_hero_banner_form['class_custom_section'];
+  $hidden_section = $sub_hero_banner_text['visible_section'] ? 'd-none' : 'd-block';
+  $id_section = $sub_hero_banner_text['id_section'];
+  $class_custom_section = $sub_hero_banner_text['class_custom_section'];
 
-  $bg_color_section = $sub_hero_banner_form['background_color_section'];
+  $bg_color_section = $sub_hero_banner_text['background_color_section'];
 
-  $bg_image_desktop = $sub_hero_banner_form['background_image_desktop'];
-  $bg_image_mobile = $sub_hero_banner_form['background_image_movil'];
+  $bg_image_desktop = $sub_hero_banner_text['background_image_desktop'];
+  $bg_image_mobile = $sub_hero_banner_text['background_image_movil'];
 
   /* CONFIGURATION CONTENT */
-  $text_color_section = $sub_hero_banner_form['text_color_section'];
-  $accent_color_section = $sub_hero_banner_form['accent_color_section'];
-  $is_hero_title = $sub_hero_banner_form['is_hero_title'];
-  $flexible_content = $sub_hero_banner_form['flexible_content'];
-
-  /* CONFIGURATION NINJA FORM */
-  $global_ninja_form = $sub_hero_banner_form['render_global_ninja_form'];
-  $show_ninja_form = $sub_hero_banner_form['show_ninja_form'];
+  $text_color_section = $sub_hero_banner_text['text_color_section'];
+  $accent_color_section = $sub_hero_banner_text['accent_color_section'];
+  $is_hero_title = $sub_hero_banner_text['is_hero_title'];
+  $flexible_content = $sub_hero_banner_text['flexible_content'];
 ?>
-<section  class="section-hero-banner-form <?= $hidden_section ?> <?= $class_custom_section ?>"
+
+<section  class="section-hero-banner-text <?= $hidden_section ?> <?= $class_custom_section ?>"
           id="<?= $id_section ?>"
           style="background-color: <?= $bg_color_section ?>;">
-
+    
   <div class="container-fluid container-image">
     <picture class="picture-content">
         <source media="(min-width: 521px)" srcset="<?php echo $bg_image_desktop['url'];?>">
@@ -34,8 +31,7 @@
 
   <div class="container container-content">
     <div class="row w-100">
-
-      <div class="col-12 col-lg-6 col-titles-banner ">
+    <div class="col-12 col-lg-6 col-titles-banner ">
         <?php if( $flexible_content ) : 
           foreach ( $flexible_content as $key => $content ): 
             if( $content['acf_fc_layout'] == 'flex_primary_ttile') : ?>
@@ -73,19 +69,6 @@
           <div class="min-content"></div>
         <?php endif;?>
       </div>
-
-      <div class="col-12 col-lg-6 col-form-banner d-flex justify-content-center">
-        <?php 
-          if( $show_ninja_form ) : 
-            get_template_part(
-              'template-parts/partials/partial_form_banner', 
-              'form' , 
-              array( 'data_form' => $data_form )
-            );
-          endif;
-        ?>
-      </div>
-
     </div>
   </div>
 </section>

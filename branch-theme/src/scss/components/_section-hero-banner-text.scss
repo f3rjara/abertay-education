@@ -1,6 +1,6 @@
-.section-hero-banner-form {
+.section-hero-banner-text {
   padding-top: calc(90px + 45px);
-  min-height: 768px;
+  min-height: 545px;
   position: relative;
   overflow: hidden;
 
@@ -20,10 +20,10 @@
         top: 0;
         left: 0;
         position: absolute;
-        min-height: 620px;
+        min-height: 410px;
         object-fit: cover;
         transition: .5s ease-in-out;
-        @media (min-width: 992px) and (max-width: 1440px) {
+        @media (min-width: 520px) and (max-width: 1440px) {
           height: 100%;
           width: auto;
           object-fit: left;
@@ -40,9 +40,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 520px;
+    min-height: auto;
     @media (max-width: 992px) { 
-      padding-top: 100px;
+      padding-top: 120px;
+      min-height: 520px;
+      align-items: flex-start;
     }
 
     .col-titles-banner {
@@ -53,12 +55,6 @@
         margin-bottom: 30px;
         @media screen and (max-width:992px) {
           margin-bottom: 15px;
-          font-size: 38px;
-          line-height: 40px;
-          span {
-            font-size: 38px;
-            line-height: 40px;
-          }
         }
       }
       .subtitle-title {
