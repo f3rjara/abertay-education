@@ -1,5 +1,5 @@
 <?php
-$menu_primary = wp_get_menu_array('menu-branch-primary');
+  $menu_primary = $args['primary_menu']; 
 ?>
 
 <div class="navbar-collapse navbar-collapse-abertay">

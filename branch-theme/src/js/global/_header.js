@@ -34,16 +34,17 @@ function scrollFunction() {
 function nabvar_movil() {
   let button_mobile = document.querySelectorAll('.navbar-toggle-abertay');
   let McButton = document.querySelectorAll('.McButton');
-  let navbar_collapse_abertay = document.querySelector('.navbar-collapse-abertay');
+  let navbar_collapse_abertay = document.querySelectorAll('.navbar-collapse-abertay');
 
   if (button_mobile) {
     button_mobile.forEach( button => {
       button.addEventListener('click', function () {
-        console.log(navbar_collapse_abertay);
         McButton.forEach( isMcButton => {
           isMcButton.classList.toggle('active');
         });
-        navbar_collapse_abertay.classList.toggle('navbar-collapse-is-show');
+        navbar_collapse_abertay.forEach( isNavbar => {
+          isNavbar.classList.toggle('navbar-collapse-is-show');
+        });
       });
     });
     
@@ -99,6 +100,7 @@ function loadMenuLevel() {
         this.querySelectorAll('.submenu').forEach(function (everysubmenu) {
           everysubmenu.classList.remove('show-submenu-items');
           document.querySelectorAll('.dropdown-menu a').forEach(function (element) {
+            element.classList.remove('show');
             element.classList.remove('show-menu-item');
           });
         });
@@ -114,6 +116,7 @@ function loadMenuLevel() {
       if (nextEl && nextEl.classList.contains('submenu')) {
         e.preventDefault();
         e.stopPropagation();
+        nextEl.classList.toggle('show');
         nextEl.classList.toggle('show-submenu-items');
         element.classList.toggle('show-menu-item');
       }
@@ -126,9 +129,23 @@ function hiddenSubmenus() {
     if (submenu) {
       let nextEl = submenu.nextElementSibling;
       if (nextEl && nextEl.classList.contains('submenu')) {
+        nextEl.classList.remove('show');
         nextEl.classList.remove('show-submenu-items');
+        submenu.classList.remove('show-menu-item');
       }
     }
+  });
+}
+
+function controlesubmenuDesktop() {
+  document.querySelectorAll('.dropdown-toggle').forEach( function ( button ) {
+    console.log( button );
+    console.log('este es el primary');
+    button.addEventListener('click' , () => {
+      document.querySelectorAll('.submenu').forEach( function (everysubmenu) {
+        everysubmenu.classList.remove('show');
+      });
+    });
   });
 }
 
@@ -138,5 +155,6 @@ export {
   show_form_search,
   formSearchBanner,
   hiddenSubmenus,
-  loadMenuLevel
+  loadMenuLevel,
+  controlesubmenuDesktop
 };

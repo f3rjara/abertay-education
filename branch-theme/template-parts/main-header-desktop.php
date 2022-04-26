@@ -18,7 +18,7 @@ endif;
   <div class="container">
     <div class="row w-100">
       <!-- LOGO SITE MAIN -->
-      <div class="col-8 col-lg-7 d-flex justify-content-start align-items-center">
+      <div class="col-8 col-lg-2 d-flex justify-content-start align-items-center">
         <a href="/" aria-label="Abertay Univeristy" class="target_logo">
           <?php  if ($abertay_logo_white) {
             echo wp_get_attachment_image($abertay_logo_white['ID'], $size, false, array('class' => "abertay_logo_white logo-navbar"));
@@ -27,8 +27,16 @@ endif;
           } ?>
         </a>
       </div>
+      <!-- MAIN MENU FOR DESKTOP  -->
+      <div class="col-lg-7 d-none d-lg-flex justify-content-start align-items-center">
+          <div class="abertay-menu-desktop">
+            <!-- Collapse Menu Primary FOR DESKTOP-->
+            <?php get_template_part('template-parts/layout/collapse_menu_primary_desktop', 'navigation' ,
+                              $args = array('primary_menu' => $menu_primary )); ?>
+          </div>
+      </div>
       <!-- CTA ACTION NAVBAR -->
-      <div class="col-3 col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
+      <div class="col-3 col-lg-2 d-none d-lg-flex justify-content-end align-items-center">
         <a  class="btn btn-abertay btn-abertay-medium px-5" 
             href="<?php echo esc_url( $link_url_secondary ); ?>"
             target="<?php echo esc_attr( $link_target_secondary ); ?>"
@@ -53,7 +61,7 @@ endif;
         </button>        
       </div>
       <!-- BTN TO COLLAPSE MENU -->
-      <div class="col-2 col-lg-1 d-flex justify-content-center align-items-center">
+      <div class="col-2 d-flex justify-content-center d-lg-none align-items-center">
         <button class="navbar-toggle-abertay" type="button" aria-label="Toggle navigation">
           <div class="McButton"> <b></b> <b></b> <b></b> </div>
         </button>
@@ -63,10 +71,8 @@ endif;
     <!-- FORM TO SEARCH TEMPLATE -->
     <?php get_template_part('template-parts/layout/form_search_navbar'); ?>
 
-    <!-- Collapse Menu Primary -->
-    <?php get_template_part(  'template-parts/layout/collapse_menu_primary' , 
-                              'navigation' ,
-                              $args = array('primary_menu' => $menu_primary )); ?>
+    <!-- Collapse Menu Primary FOR MOVIL-->
+    <?php get_template_part(  'template-parts/layout/collapse_menu_primary', 'navigation' , $args = array('primary_menu' => $menu_primary )); ?>
   </div>
 </nav>
 
