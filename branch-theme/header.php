@@ -19,9 +19,9 @@
     <meta content='website' property='og:type'>
     <meta content='<?php wp_title('|', true, 'right'); ?>' property='og:title'>
     <meta content='<?php bloginfo('description'); ?>' property='og:description'>
+    <meta content="<?php $featuredImage = get_field('featured_image'); echo esc_url( $featuredImage['url'] ); ?>" property="og:image"  />
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
-
     <?php wp_head(); ?>
   </head>
 
