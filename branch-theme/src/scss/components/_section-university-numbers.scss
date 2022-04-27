@@ -1,0 +1,57 @@
+.section-university-numbers {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  @media screen and (max-width:992px) {
+    background-position: top right;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-blend-mode: exclusion;
+  }
+  .title-primary, .caption-text {
+    color: $theme_gray_03;
+  }
+
+  .row-percentage {
+    .single-chart {
+      justify-content: center ;
+      .circular-chart {
+        display: block;
+        margin: 15px auto;
+        width: 100%;
+        max-width: 135px;
+        max-height: 135px;
+        .circle-bg {
+          fill: none;
+          stroke: $theme_gray_03;
+          stroke-width: .5;
+        }
+        .circle {
+          fill: transparent;
+          stroke-width: .9;
+          stroke-linecap: round;
+          animation: progress 1s ease-out forwards;
+          animation-delay: 4s;
+          transform: scale(.87);
+          transform-origin: center;
+          stroke: $theme_mint_green_01;
+        }
+        .percentage {
+          fill: $theme_mint_green_01;
+          font-size: 0.6em;
+          text-anchor: middle;
+          font-weight: 700;
+        }
+      }
+      .description-percentage {
+        color: $theme_mint_green_01;
+        margin-bottom: 0;
+        font-family: $font_primary;
+        font-weight: 400;
+      }
+    }
+    
+    @keyframes progress { 0% {  stroke-dasharray: 0 100;  }   }
+    
+  }
+}

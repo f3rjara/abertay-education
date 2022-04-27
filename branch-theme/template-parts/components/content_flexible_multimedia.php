@@ -22,10 +22,9 @@
   <div class="container">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-12 col-lg-6 <?= $invert_columns ?>">
-        <h2 class="title-primary">Creating a workforce for <span>the future</span></h2>
+        <h2 class="title-primary"><?= $sub_content_multimedia['primary_title'] ?></h2>
         <div class="content-text text-p2">
-          <p>With roots stretching back to 1888, Abertay University has always responded to the needs of industry, creating highly employable graduates with the skills to work, lead and innovate across a wide range of sectors.</p>
-          <p>Our mission is to offer transformational opportunities through our cutting-edge approach to education, to inspire and enable our students, staff and graduates to achieve their full potential and to have a positive impact on the world around us, and to prepare students for the world of work and a life of learning.</p>
+          <?= $sub_content_multimedia['description_text'] ?>
         </div>
       </div>
       <div class="col-12 col-lg-5 col-flexible-multimedia">

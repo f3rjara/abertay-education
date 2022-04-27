@@ -25,4 +25,6 @@
     get_template_part('template-parts/components/content_flexible_multimedia');
   endif;
 
-  
+  if( get_row_layout() == 'sub_component_university_numbers' ):
+    get_template_part('template-parts/components/university_numbers');
+  endif;
