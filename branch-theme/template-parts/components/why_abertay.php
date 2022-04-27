@@ -29,7 +29,7 @@ $features_abertay = $sub_why_abertay['repeater_feautures'];
         <?php foreach ( $features_abertay as $key => $feature ) : ?>
           <div class="col-12 col-lg-4 col-xl-3 col-feature">
             <h2 class="title-primary text-center"><?= $feature['ttile'] ?></h2>
-            <p class="caption-text mt-3 text-center description-text">
+            <p class="caption-text mt-3 mb-lg-0 text-center description-text">
               <?= $feature['description'] ?>
             </p>
           </div>

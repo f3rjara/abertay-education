@@ -191,4 +191,15 @@
   }
 }
 
+.col-flexible-multimedia {
+  .partial-univa-multimedia {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
 main {  min-height: 85vh; }

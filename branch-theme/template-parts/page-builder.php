@@ -16,3 +16,13 @@
   if( get_row_layout() == 'sub_component_why_abertay' ):
     get_template_part('template-parts/components/why_abertay');
   endif;
+
+  if( get_row_layout() == 'sub_component_our_accreditations' ):
+    get_template_part('template-parts/components/our_accreditations');
+  endif;
+
+  if( get_row_layout() == 'sub_component_content_multimedia' ):
+    get_template_part('template-parts/components/content_flexible_multimedia');
+  endif;
+
+  

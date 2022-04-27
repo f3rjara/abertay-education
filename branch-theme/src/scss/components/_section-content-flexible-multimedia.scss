@@ -1,0 +1,26 @@
+.section-content-flexible-multimedia {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  @media screen and (max-width:992px) {
+    background-position: top right;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-blend-mode: exclusion;
+  }
+  .title-primary {
+    color: $white;
+    padding-right: 36%;
+    margin-bottom: 35px;
+    span {
+      color: $theme_hot_pink_02;
+    }
+  }
+  .content-text  {
+    p, a, span, li {
+      color: $theme_gray_05;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

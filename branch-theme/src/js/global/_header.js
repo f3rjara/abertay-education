@@ -73,13 +73,8 @@ function formSearchBanner() {
       event.preventDefault();
       if( input_search ){
         if( input_search.value.trim().length  >= 0 && input_search.value.trim().length <= 2) {
-          console.log('abra error');
           var myAlert = document.getElementById('toastNotice');//select id of toast
-          console.log( myAlert );
-          console.log( bootstrap );
-          console.log( bootstrap.Toast );
           var bsAlert =  bootstrap.Toast.getOrCreateInstance( myAlert );//inizialize it
-          console.log(bsAlert);
           bsAlert.show();//show it
         }
         else {
@@ -139,8 +134,6 @@ function hiddenSubmenus() {
 
 function controlesubmenuDesktop() {
   document.querySelectorAll('.dropdown-toggle').forEach( function ( button ) {
-    console.log( button );
-    console.log('este es el primary');
     button.addEventListener('click' , () => {
       document.querySelectorAll('.submenu').forEach( function (everysubmenu) {
         everysubmenu.classList.remove('show');
