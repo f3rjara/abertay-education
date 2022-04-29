@@ -1,0 +1,9 @@
+.container-banner-form {
+  background-color: $theme_gray_05;
+  padding: 1.2em 2em;
+  max-width: 415px;
+  @media screen and (max-width:992px) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

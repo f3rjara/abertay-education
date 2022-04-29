@@ -1,3 +1,5 @@
+import { scrollFunction, nabvar_movil, show_form_search, formSearchBanner ,  hiddenSubmenus, loadMenuLevel, controlesubmenuDesktop } from './global/_header';
+import { load_video_local } from './components/_flexible_multimedia';
 
 function theme_mode() {
   return document.querySelector('body').classList.contains('developmet-mode') ? 'developmet-mode' : 'production-mode';
@@ -5,5 +7,16 @@ function theme_mode() {
 
 window.onload = function () {
   console.log('Theme Ready');
-  theme_mode();
+  theme_mode(); 
+  loadMenuLevel();
+  hiddenSubmenus();
+  nabvar_movil();
+  show_form_search();
+  formSearchBanner();
+  controlesubmenuDesktop();
+  load_video_local();
+};
+
+window.onscroll = function( ) {
+  scrollFunction();
 };

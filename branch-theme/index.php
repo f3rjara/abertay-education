@@ -13,12 +13,11 @@
   get_header();
 ?>  
   <main>
-    <section>
+    <section class="py-abertay">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <h1><?= the_title() ?></h1>
-            <hr>
             <?= the_content() ?>
           </div>
         </div>

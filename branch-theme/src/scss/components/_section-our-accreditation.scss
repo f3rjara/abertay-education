@@ -1,0 +1,14 @@
+.section-our-accreditation {
+  .title-primary {
+    color: $theme_purple_02;
+  }
+
+  &.dark-mode-section {
+    .title-primary {
+      color: $theme_purple_05;
+    }
+    .caption-text {
+      color: $theme_gray_05;
+    }
+  }
+}
