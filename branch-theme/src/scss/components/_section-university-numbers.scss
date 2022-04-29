@@ -15,6 +15,7 @@
   .row-percentage {
     .single-chart {
       justify-content: center ;
+      transition: 1s ease-in-out;
       .circular-chart {
         display: block;
         margin: 15px auto;
@@ -30,11 +31,11 @@
           fill: transparent;
           stroke-width: .9;
           stroke-linecap: round;
-          animation: progress 1s ease-out forwards;
-          animation-delay: 4s;
+          animation: progress 3s ease-out forwards;
           transform: scale(.87);
           transform-origin: center;
-          stroke: $theme_mint_green_01;
+          stroke: $theme_mint_green_01; 
+          transition: 1s ease-in-out;
         }
         .percentage {
           fill: $theme_mint_green_01;
@@ -48,6 +49,16 @@
         margin-bottom: 0;
         font-family: $font_primary;
         font-weight: 400;
+      }
+      &:hover {
+        transform: translateY(-10px);
+        .circular-chart {
+          .circle {
+              animation: progress 1s ease-out forwards;
+              animation-play-state: running;
+              transform: scale(.87) rotate(360deg);
+          }
+        }
       }
     }
     
