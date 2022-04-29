@@ -76,7 +76,7 @@
   }
 
   function pupulate_submenu_html( $submenu ) {      
-    echo '<ul class="submenu dropdown-menu">';      
+    echo '<ul class="submenu dropdown-menu">';
       foreach ($submenu as $key => $dropdown_item): 
         $class_item = implode(" ", $dropdown_item['classes']);
         if( count( $dropdown_item['children'] ) <= 0 ) :

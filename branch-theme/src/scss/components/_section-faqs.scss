@@ -1,0 +1,122 @@
+.section-faqs {
+  .row-collapse {
+    .accordion-flush {
+      border: none;
+      display: flex;
+      justify-content:center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      @media (max-width: 768px) {
+        margin: 0 !important;
+      }
+    }
+    .accordion-header {
+      margin-bottom: 0;
+    }
+    .accordion-button {
+      padding: 15px 50px 15px 30px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      border-radius: 0px !important;;
+      position: relative;
+      border: none;
+      border-bottom: 2px dashed gray;
+      @media (max-width: 768px) {
+        padding: 20px 25px 20px 20px;
+      }
+      span {
+        color: $theme_hot_pink_02;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .cube {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        position: absolute;
+        right: 0;
+        @media (max-width: 768px) {
+          margin-right: 8px;
+        }
+        &::after {
+          content: " ";
+          height: calc(100% - 10px);
+          width: calc(100% - 10px);
+          left: 1px;
+          top: 5px;
+          position: absolute;
+          border-top:  2px solid $theme_hot_pink_02;
+          border-right: 2px solid $theme_hot_pink_02;
+          transform: rotate(45deg);
+        }
+      }
+      &.show {
+        background-color: $theme_hot_pink_02 !important;
+      }
+      &::after {
+        display: none !important;
+      }
+      &:hover {
+        background-color: $theme_hot_pink_01 !important;
+        span {
+          color: $white;
+        }
+        .cube::before,
+        .cube::after {
+          background: transparent !important;
+          border-top:  2px solid $white;
+          border-right: 2px solid $white;
+        }
+      }
+      
+      &:not(.collapsed) {
+        .cube {
+          &::after {
+            transform: rotate(135deg);
+            border-top:  2px solid $theme_hot_pink_02;
+            border-right: 2px solid $theme_hot_pink_02;
+          }
+        }
+      }
+      &:focus {
+        border: none;
+        border-bottom: 2px dashed gray;
+        box-shadow: none;
+      }
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: $theme_hot_pink_02;
+      border-radius: 15px 15px 0px 0px;
+      border: none;
+      border-bottom: 2px dashed $theme_gray_05;
+      span {
+        color: $white;
+      }
+      .cube {
+        &::after {
+          border-top: 2px solid $white;
+          border-right: 2px solid $white;
+        }
+      }
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      display: none;
+      transform: rotate(180deg);
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      left: 19px;
+      top: 14px;
+    }
+    .accordion-body {
+      padding: 10px 50px 10px 30px;
+      background: $theme_gray_05;
+    }
+  }
+
+}
