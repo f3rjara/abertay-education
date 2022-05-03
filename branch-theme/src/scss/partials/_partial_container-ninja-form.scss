@@ -1,5 +1,102 @@
 .container-ninja-form {
-  background-color: $theme_gray_02;
   border-radius: 5px;
   min-height: 80px;
+  
+  .nf-form-fields-required {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+    span { 
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+  .nf-error-msg {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    width: fit-content;
+  }
+  .nf-form-content {
+    padding: 0; 
+    .nf-row {
+      .nf-cell {
+        padding: 0;
+      }
+      .nf-field-container {
+        margin-bottom: 5px;
+
+        .nf-input-limit {
+          display: none;
+        }
+      }
+
+      .nf-field-label {
+        margin-top: 4px;
+      }
+
+      .container-submit-ninja {
+        margin-top: 15px;
+        .element-submit-ninja {
+          &:hover {
+            background-color: $theme_green_05 !important;
+          }
+        }
+      }
+      .container-select-ninja {
+        .nf-field-element {
+          .element-select-ninja, div {
+            height: 35px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #D8D8D8;
+            background-color: transparent !important;
+          }
+          div {
+            background-color: white !important;
+          }
+        }
+        
+      }
+
+      .element-text-ninja {
+        height: 35px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #D8D8D8;
+      }
+
+      .checkbox-container.label-right label:after {
+        left: -23px;
+        top: 5px;
+      }
+
+      .nf-error.field-wrap .nf-field-element:after {
+        height: 34px;
+        width: 34px;
+        line-height: 34px;
+        z-index: 5;
+      }
+
+      .nf-pass.field-wrap .nf-field-element:after {
+        height: 34px;
+        width: 34px;
+        line-height: 34px;
+        z-index: 5;
+        font-size: 20px;
+      }
+
+      .list-select-wrap>div div:after {
+        z-index: 15;
+        height: 35px;
+        line-height: 35px;
+      }
+
+      &:last-child {
+        height: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
 }

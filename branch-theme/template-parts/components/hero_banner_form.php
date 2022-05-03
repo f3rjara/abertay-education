@@ -17,8 +17,13 @@
   $flexible_content = $sub_hero_banner_form['flexible_content'];
 
   /* CONFIGURATION NINJA FORM */
-  $global_ninja_form = $sub_hero_banner_form['render_global_ninja_form'];
   $show_ninja_form = $sub_hero_banner_form['show_ninja_form'];
+  $data_form  = array (
+    "title" => $sub_hero_banner_form['title_ninja_form'],
+    "shortcode" => $sub_hero_banner_form['shortcode_ninja_form']
+  )
+  
+  
 ?>
 <section  class="section-hero-banner-form <?= $hidden_section ?> <?= $class_custom_section ?>"
           id="<?= $id_section ?>"
@@ -74,7 +79,7 @@
         <?php endif;?>
       </div>
 
-      <div class="col-12 col-lg-6 col-form-banner d-flex justify-content-center">
+      <div class="col-12 col-lg-6 col-form-banner d-flex justify-content-center justify-content-lg-end">
         <?php 
           if( $show_ninja_form ) : 
             get_template_part(
