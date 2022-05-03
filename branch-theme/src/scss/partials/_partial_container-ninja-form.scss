@@ -42,6 +42,9 @@
             background-color: $theme_green_05 !important;
           }
         }
+        @media screen and (max-width:992px) {
+          margin-top: 0;
+        }
       }
       .container-select-ninja {
         .nf-field-element {
@@ -96,6 +99,7 @@
         height: 0;
         margin: 0;
         padding: 0;
+        display: flex;
       }
     }
   }

@@ -37,3 +37,14 @@
     get_template_part('template-parts/components/faqs');
   endif;
   
+  if( get_row_layout() == 'sub_component_content_outline' ):
+    get_template_part('template-parts/components/content_outline_multimedia');
+  endif;
+  
+  if( get_row_layout() == 'sub_component_modules_programm' ):
+    get_template_part('template-parts/components/modules_programm');
+  endif;
+
+  if( get_row_layout() == 'sub_component_start_dates' ):
+    get_template_part('template-parts/components/start_dates');
+  endif;
