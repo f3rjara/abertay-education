@@ -9,6 +9,41 @@
  */
 
 get_header();
+
+$test_taxonomy = get_field('taxonomy_programs');
+$terminos_seacrh  = array();
+$category_primary = '';
+
+if( $test_taxonomy )  {
+  foreach ( $test_taxonomy as $key => $id_term ) {
+    $term = get_term( $id_term  ); 
+    $category_primary  =  $term->taxonomy;
+    array_push( $terminos_seacrh ,  $term->slug); 
+  }
+}
+$the_query = new WP_Query( array(
+  'post_type' => 'programs',
+  'posts_per_page' => -1,
+  'orderby' => 'title',
+  'order' => 'ASC',
+  'tax_query' => array(
+      array (
+          'taxonomy' =>  $category_primary,
+          'field'    => 'slug',
+          'terms' => $terminos_seacrh,
+          'include_children' => false
+      )
+  ),
+) );
+
+while ( $the_query->have_posts() ) : $the_query->the_post();
+  // Show Posts ...
+  echo "----";
+  the_title( '<h1 class="entry-title">', '</h1>' );
+  echo "----";
+endwhile;
+wp_reset_postdata();
+
 ?>
 
 <div id="primary" class="content-area">

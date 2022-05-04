@@ -1,0 +1,41 @@
+.section-potential-career {
+
+  .title-section {
+    color: $theme_purple_01;
+  }
+  .caption-text {
+    color: $theme_black;
+  }
+  .list-career {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    .item-list {
+      font-family: $font_primary;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 31px;
+      color: $theme_purple_01;
+      margin: 10px 30px 10px 30px;
+      width: max-content;
+    }
+  }
+
+  &.dark-mode-section {
+
+    .title-section {
+      color: $theme_purple_05;
+    }
+    .caption-text {
+      color: $theme_gray_05;
+    }
+    .list-career { 
+      .item-list {
+        color: $theme_purple_04;
+      }
+    }
+  }
+}
