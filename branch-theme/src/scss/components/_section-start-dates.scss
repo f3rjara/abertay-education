@@ -1,0 +1,30 @@
+.section-start-dates {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  @media screen and (max-width:992px) {
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: exclusion;
+  }
+  .col-date {
+    display: flex;
+    justify-content: center;
+    .icon-date {
+      margin-right: 15px;
+    }
+    .content-date {
+      min-width: 190px;
+    }
+    @media screen and (max-width:992px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.dark-mode {
+    .title-section, .caption-text, .title-date, .description-date {
+      color: $white;
+    }
+  }
+}
