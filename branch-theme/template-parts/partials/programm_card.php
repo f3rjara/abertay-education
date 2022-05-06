@@ -14,23 +14,34 @@
   $features_cards = $content_card['features_cards'];
 ?>
 
-<div class="programm-card card my-3 h-100">
-  <?= wp_get_attachment_image( $image_primary,  'large', false, array('class' => 'card-img-top') ); ?>
-  <div class="card-body">
-    <p class="modality-prg"><?= $program_modality ?></p>
-    <h4 class="card-title"><?= $title_card ?></h4>
-    <ul class="features-cards">
-      <?php foreach ( $features_cards as $key => $item ) : ?>
-        <li class="item-list">
-          <?= wp_get_attachment_image( $item['icon'] ,  'full', false, array('class' => 'icon-feature') ); ?>
-          <h6 class="feature text-p2"><?=  $item['title'] ?> <span><?=  $item['description'] ?></span></h6>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-    <p class="card-text"><?= $description_card ?></p>
+<div class="programm-card card my-3 h-100 ">
+  <div class="grid">
 
+    <figure class="effect-apollo">
+      <?= wp_get_attachment_image( $image_primary,  'large', false, array('class' => 'card-img-top') ); ?>
+      <figcaption>
+        <a href="<?= $post_permalink ?>"  aria-label="<?php echo $title_card; ?>"><?php echo $title_card; ?></a>
+      </figcaption>
+    </figure>
+  </div>
+
+
+  <div class="card-body">
+    <div class="card-text">
+      <p class="modality-prg"><?= $program_modality ?></p>
+      <h4 class="card-title"><?= $title_card ?></h4>
+      <ul class="features-cards">
+        <?php foreach ( $features_cards as $key => $item ) : ?>
+          <li class="item-list">
+            <?= wp_get_attachment_image( $item['icon'] ,  'full', false, array('class' => 'icon-feature') ); ?>
+            <h6 class="feature text-p2"><?=  $item['title'] ?> <span><?=  $item['description'] ?></span></h6>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+      <p class="card-text"><?= $description_card ?></p>
+    </div>
     <div class="card-button">
-      <a href="#" class="btn btn-abertay btn-abertay-outline-pink"><?= $label_button ?></a>
+      <a href="<?= $post_permalink ?>"   aria-label="<?php echo $title_card; ?>" class="btn btn-abertay btn-abertay-outline-pink"><?= $label_button ?></a>
     </div>
   </div>
   

@@ -9,7 +9,6 @@
 
   // FILTER PROGRAMS
   $prg_taxonomy = $sub_filter_programs['taxonomy_programs'];
-
   $test_taxonomy = $prg_taxonomy['taxonomy_programs'];
   
   $terminos_seacrh  = array();
