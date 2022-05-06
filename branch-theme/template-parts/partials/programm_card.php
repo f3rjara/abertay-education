@@ -10,11 +10,11 @@
   $label_button = strlen( get_field('label_button_card') ) > 0 ? get_field('label_button_card') : 'Read more';
 
   if( strlen( $content_card['description_card'] ) > 0 ) { $description_card = $content_card['description_card']; }
-  else { $description_card = substr( get_the_excerpt() , 0, 120) . '...' ;}
+  else { $description_card = substr( get_the_excerpt() , 0, 115) . '...' ;}
   $features_cards = $content_card['features_cards'];
 ?>
 
-<div class="programm-card card my-3 h-100 ">
+<div class="programm-card card h-100">
   <div class="grid">
 
     <figure class="effect-apollo">
