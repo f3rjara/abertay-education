@@ -48,3 +48,15 @@
   if( get_row_layout() == 'sub_component_start_dates' ):
     get_template_part('template-parts/components/start_dates');
   endif;
+
+  if( get_row_layout() == 'sub_component_potential_career' ):
+    get_template_part('template-parts/components/potential_career');
+  endif;
+  
+  if( get_row_layout() == 'sub_component_entry_requirements' ):
+    get_template_part('template-parts/components/entry_requierements');
+  endif;
+  
+  if( get_row_layout() == 'sub_component_filter_programs' ):
+    get_template_part('template-parts/components/filter_programs');
+  endif;

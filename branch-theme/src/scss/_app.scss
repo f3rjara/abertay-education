@@ -179,6 +179,20 @@
       color: $white;
     }
   }
+
+  &.btn-abertay-outline-pink {
+    background-color: transparent;
+    border: 1px solid $theme_hot_pink_02;
+    color: $theme_hot_pink_02;
+    &:hover {
+      background-color: $theme_hot_pink_02;
+      color: $white;
+    }
+    &:active {
+      background-color:$theme_hot_pink_02;
+      color: $white;
+    }
+  }
 }
 
 // Padding for Section 
