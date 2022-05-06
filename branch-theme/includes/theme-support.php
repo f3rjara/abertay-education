@@ -85,7 +85,6 @@ if ( ! function_exists( 'branch_theme_setup' ) ) :
   }
 endif;
 
-
 if( ! function_exists( 'branch_theme_widgets_init' ) ) :
   function branch_theme_widgets_init() {
     register_sidebar( array(
@@ -100,7 +99,6 @@ if( ! function_exists( 'branch_theme_widgets_init' ) ) :
   }
 endif;
 
-
 function remove_core_updates() {
 	if (!current_user_can('update_core')) {
 		return;
@@ -110,19 +108,16 @@ function remove_core_updates() {
 	add_filter('pre_site_transient_update_core', '__return_null');
 }
 
-
-
-  
 function branch_dashboard_widgets() {
   global $wp_meta_boxes;  
   wp_add_dashboard_widget('custom_help_widget', 'Branch Theme Support', 'custom_dashboard_help');
 }
+
 function custom_dashboard_help() {
   get_template_part( 'template-parts/support-theme', 'content' );
 }
 
 // Deshabilitar la notificación de actualización de plugins
-
 function dcms_disable_plugin_update( $value ) {
 	if ( isset($value) && is_object($value) ) {
 		// Desactivamos las notificaciones del plugin ACF PRO

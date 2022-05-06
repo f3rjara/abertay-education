@@ -1,0 +1,44 @@
+.section-entry-requierements {
+  .title-section {
+    color: $theme_purple_01;
+  }
+  .caption-text {
+    color: $theme_black;
+  }
+  .title-requirement {
+    color: $theme_hot_pink_02;
+  }
+  .list-requierement {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    .item-list {
+      font-family: $font_primary;
+      font-style: normal;
+      font-weight: 400;
+      color: $theme_purple_01;
+      margin: 10px 30px 10px 30px;
+      width: max-content;
+    }
+  }
+
+  &.dark-mode-section {
+
+    .title-section {
+      color: $theme_purple_05;
+    }
+    .caption-text {
+      color: $theme_gray_05;
+    }
+    .title-requirement {
+      color: $theme_hot_pink_05;
+    }
+    .list-requierement { 
+      .item-list {
+        color: $theme_purple_05;
+      }
+    }
+  }
+}

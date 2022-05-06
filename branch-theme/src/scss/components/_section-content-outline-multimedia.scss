@@ -1,0 +1,37 @@
+.section-content-outline {
+  .col-content-outline {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 140%;
+      height: 110%;
+      top: -5%;
+      left: -5%;
+      z-index: 15;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233CABA4FF' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='82' stroke-linecap='square'/%3e%3c/svg%3e");
+      @media screen and (max-width:992px) {
+        width: 110%;
+      }
+      @media screen and (max-width:768px) {
+        width: 100%;
+        left: 0;
+        height: 105%;
+        top: -2.5%;
+      }
+    }
+    &.order-2 {
+      &::after {
+        left: initial;
+        right: -5%;
+        @media screen and (max-width:768px) {
+          width: 100%;
+          right: 0;
+        }
+      }
+      @media screen and (max-width:768px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
