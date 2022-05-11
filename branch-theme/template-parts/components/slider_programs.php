@@ -41,7 +41,7 @@
     <!-- TITLES SECTIONS  -->
     <div class="row d-flex justify-content-center">
       <div class="col-12 col-lg-7">
-        <h2 class="title-primary text-center mb-3"><?= $sub_slider_programs['title_primary'] ?></h2>
+        <h2 class="title-primary text-center mb-4"><?= $sub_slider_programs['title_primary'] ?></h2>
       </div>
       <div class="col-12 col-lg-7 px-lg-2">
         <?php if (strlen($sub_slider_programs['caption_text']) > 0) : ?>
