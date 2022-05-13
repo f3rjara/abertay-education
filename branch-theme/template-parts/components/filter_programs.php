@@ -16,8 +16,7 @@
 <section  class="section-filter-programs py-abertay <?= $hidden_section ?> <?= $class_custom_section ?>"
           id="<?= $id_section ?>"
           style="background-color: <?= $bg_color_section ?>;">
-  <div class="container-fluid px-5">
-
+  <div class="container-fluid px-lg-5">
     <div class="row d-flex justify-content-center">
       <div class="col-12 col-lg-7">
         <h2 class="title-primary text-center mb-3"><?= $sub_filter_programs['title_primary'] ?></h2>

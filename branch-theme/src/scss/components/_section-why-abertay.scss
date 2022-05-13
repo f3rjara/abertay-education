@@ -4,13 +4,17 @@
   }
   .row-features {
     .col-feature {
-      border-right: 4px dashed #979797;
+      border-right: 3px dashed #979797b3;
       .title-primary {
         color: $theme_mint_green_03;
       }
       .description-text {
         padding: 0.5em 1em;
         color: $theme_purple_01;
+        @media screen and (max-width: 992px) { 
+          padding-bottom: 20px;
+          border-bottom: 3px dashed #979797b3;
+        }
       }
       &:last-child {
         border-right: none;

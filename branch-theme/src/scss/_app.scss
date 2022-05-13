@@ -28,6 +28,11 @@
   }
 }
 
+::selection {
+  color: $white;
+  background: $theme_hot_pink_01;
+}
+
 // Class Colors 
 .theme_red_01 { background-color: $theme_red_01; } 
 .theme_red_02 { background-color: $theme_red_02; } 

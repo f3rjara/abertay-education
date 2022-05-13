@@ -16,11 +16,16 @@
         font-size: 18px;
         line-height: 26px;
         width: max-content;
+        border-radius: 0;
         &.active {
           background-color: transparent;
           color: $theme_mint_green_02;
           border-bottom: 2px solid $theme_mint_green_02;
-            border-radius: 0;
+        }
+        &:hover {
+          background-color: transparent;
+          color: $theme_mint_green_02;
+          border-bottom: 2px solid $theme_mint_green_02;
         }
         @media screen and (max-width:768px) {
           font-size: 16px;
@@ -60,11 +65,16 @@
       .nav-item {
         .nav-link {
           color: $white;
+          border-radius: 0;
           &.active {
             background-color: transparent;
             color: $theme_mint_green_02;
             border-bottom: 2px solid $theme_mint_green_02;
-            border-radius: 0;
+          }
+          &:hover {
+            background-color: transparent;
+            color: $theme_mint_green_02;
+            border-bottom: 2px solid $theme_mint_green_02;
           }
         }
       }

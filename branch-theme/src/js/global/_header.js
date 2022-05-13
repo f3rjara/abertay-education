@@ -16,6 +16,7 @@ function scrollFunction() {
     abertay_logo_white.classList.add('d-none');
     abertay_logo_color.classList.remove('d-none');
     document.querySelector('#abertay_form_navbar_search').classList.remove('active_search');
+    document.querySelector('.bg_form_abertay').classList.remove('active_search');
   }
   if (  (document.body.scrollTop > 50 && document.body.scrollTop < 500) ||
         (document.documentElement.scrollTop > 50 &&  document.documentElement.scrollTop < 500 ) )  {  
@@ -54,13 +55,23 @@ function nabvar_movil() {
 function show_form_search() {
   let button_search_toogle = document.querySelector('.button-search-toogle');
   let abertay_form_navbar_search = document.querySelector('.abertay_form_navbar_search');
+  let bg_form_abertay = document.querySelector('.bg_form_abertay');
+  
   if ( button_search_toogle ) {
     button_search_toogle.addEventListener('click', function () {
       if( abertay_form_navbar_search ) {
         abertay_form_navbar_search.classList.toggle('active_search');
+        bg_form_abertay.classList.toggle('active_search');
       }
     });
   }
+  bg_form_abertay.addEventListener('click', function () {
+    if( abertay_form_navbar_search ) {
+      abertay_form_navbar_search.classList.remove('active_search');
+      bg_form_abertay.classList.remove('active_search');
+    }
+  });
+  
 }
 
 function formSearchBanner() {

@@ -60,3 +60,11 @@
   if( get_row_layout() == 'sub_component_filter_programs' ):
     get_template_part('template-parts/components/filter_programs');
   endif;
+
+  if( get_row_layout() == 'sub_component_slider_programs' ):
+    get_template_part('template-parts/components/slider_programs');
+  endif;
+
+  if( get_row_layout() == 'sub_component_tuition_fees' ):
+    get_template_part('template-parts/components/tuition_fees');
+  endif;

@@ -1,0 +1,27 @@
+.section-slider-programs {
+  .title-primary {
+    color: $theme_purple_01
+  }
+  .caption-text {
+    color: $theme_black;
+  }
+  .row-splide {
+    padding-bottom: 45px;
+    .splide__track {
+      cursor: grab;
+      padding: 1em;
+      &:active {
+        cursor: grabbing;
+      }
+    }
+    .splide__pagination {
+      bottom: -45px;
+      .splide__pagination__page {
+        background: $theme_hot_pink_01;
+        &.is-active {
+          background: $theme_purple_01;
+        }
+      }
+    }
+  }
+}

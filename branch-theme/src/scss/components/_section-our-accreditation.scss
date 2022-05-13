@@ -2,7 +2,19 @@
   .title-primary {
     color: $theme_purple_02;
   }
-
+  .col-feature {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width:768px) {
+      margin-bottom: 30px;
+      .image-accreditation {
+        max-width: 90%;
+        height: auto;
+      }
+    }
+  }
   &.dark-mode-section {
     .title-primary {
       color: $theme_purple_05;

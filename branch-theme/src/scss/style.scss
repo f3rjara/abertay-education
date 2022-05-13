@@ -1,5 +1,6 @@
 @import 'boostrap';
 @import 'variables';
+//@import 'splide';
 //App Theme
 @import 'app';
 //Global
@@ -26,4 +27,6 @@
 @import './components/section-potential-career';
 @import './components/section-entry-requierements';
 @import './components/section-filter-programs';
+@import './components/section-slider-programs';
+@import './components/section-tuition-fees';
 //Pages

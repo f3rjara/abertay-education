@@ -28,7 +28,7 @@ endif;
         </a>
       </div>
       <!-- MAIN MENU FOR DESKTOP  -->
-      <div class="col-lg-7 d-none d-lg-flex justify-content-start align-items-center">
+      <div class="col-lg-7 col-xl-6 d-none d-lg-flex justify-content-start align-items-center">
           <div class="abertay-menu-desktop">
             <!-- Collapse Menu Primary FOR DESKTOP-->
             <?php get_template_part('template-parts/layout/collapse_menu_primary_desktop', 'navigation' ,
@@ -36,7 +36,7 @@ endif;
           </div>
       </div>
       <!-- CTA ACTION NAVBAR -->
-      <div class="col-3 col-lg-2 d-none d-lg-flex justify-content-end align-items-center">
+      <div class="col-3 col-lg-2 col-xl-3 d-none d-lg-flex justify-content-end align-items-center">
         <a  class="btn btn-abertay btn-abertay-medium px-5" 
             href="<?php echo esc_url( $link_url_secondary ); ?>"
             target="<?php echo esc_attr( $link_target_secondary ); ?>"
