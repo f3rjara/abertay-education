@@ -83,13 +83,13 @@
             }
             .dropdown-item  {
               &:hover {
-                background: $theme_green_01;
+                //background: $theme_green_01;
                 color: $theme_mint_green_05;
                 &:after {
                   content: '';
-                  width: 90%;
+                  width: 80%;
                   position: absolute;
-                  left: 5%;
+                  left: 10%;
                   bottom: 2px;
                   border-width: 0 0 1px;
                   border-style: solid;
@@ -99,6 +99,9 @@
             }
           }
           
+        }
+        .dropdown-toggle.show {
+          background-color: $theme_green_01;
         }
       }
     }

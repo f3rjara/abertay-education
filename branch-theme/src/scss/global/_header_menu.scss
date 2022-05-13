@@ -10,6 +10,11 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
   left: 0;
   transition: 1s ease-in-out;
   z-index: 924;
+  @media screen and (max-width:768px) {
+    .container {
+      justify-content: center;
+    } 
+  }
   &.navbar-abertay-scroll-show {
     background-color: $white;
     box-shadow: $efect_shadown;
@@ -46,8 +51,9 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
       left: 0;
       transform: translateY(-50%);
       @media (max-width: 768px) { 
-        height: 25px;
-        max-width: 50px;
+        height: 20px;
+        max-width: 60px;
+        transform: translateY(-80%) translateX(0px);
       }
       b {
         position: absolute;
@@ -60,6 +66,11 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
         &:nth-child(1) { top: 0; }
         &:nth-child(2) { top: 50%; }
         &:nth-child(3) { top: 100%; }
+        @media (max-width: 768px) { 
+          left: 0%;
+          width: 100%;
+        }
+
       }
       &.active {
         b {
@@ -95,22 +106,38 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
   }
 
   .abertay_form_navbar_search {
-    position: absolute;
+    position: fixed;
     width: 80%;
-    left: 10%;
-    bottom: -10px;
-    transform: translateY( 100% );
+    left: 50%;
+    top: 50%;
+    transform: translateY( -50% ) translateX( -50%);
     z-index: $zindex-tooltip;
     display: none;
+    
     &.active_search {
       display: block;
     }
     @media (max-width: 992px) { 
       width: 90%;
-      left: 5%;
+    }
+    .btn-search {
+      max-width: 70px;
+      max-height: 50px;
     }
   }
-
+  .bg_form_abertay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: $zindex-popover;
+    &.active_search {
+      display: block;
+    }
+  }
   .navbar-collapse {
     position: fixed;
     width: 30%;
@@ -118,8 +145,8 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
     top: 0px;
     right: -100%;
     background-color: $theme_green_03;
-    padding: 2em;
-    z-index: $zindex-tooltip;
+    padding: 1em;
+    z-index: $zindex-offcanvas;
     transition: .2s ease-in-out;
     &.navbar-collapse-is-show {
       right: 0;
@@ -128,9 +155,13 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
       width: 90%;
       height:  100vh;
     }
+    @media (max-width: 768px) { 
+      width: 100%;
+      height:  100vh;
+    }
     .container-primary-menu {
       width: 100%;
-      height: 100%;
+      height: 95%;
       padding: 1em;
       display: flex;
       align-items: flex-start;
@@ -140,6 +171,11 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
       padding-top: calc(1em + 50px);
       @media screen and (max-width:992px) {
         padding-top: calc(1em + 60px);
+      }
+      @media screen and (max-width:768px) {
+        padding: 0;
+        padding-top: calc(1em + 50px);
+        padding-right: 10px;
       }
       /* width */
       &::-webkit-scrollbar {
@@ -168,15 +204,15 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
         position: absolute;
         right: 1em;
         top: 10px;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border: 1px solid white;
         border-radius: 50%;
         .McButton.active {
-          width: 80%;
+          width: 60%;
           left: 50%;
           height: 50%;
-          transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-60%) translateX(-50%);
         }
       }
       .navbar-nav  {
@@ -199,6 +235,10 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
             cursor: pointer;
             position: relative;
             transform-origin: center center;
+            @media screen and (max-width:768px) { 
+              font-size: 16px;
+              line-height: 25px;
+            }
             &:hover {
               background-color: $theme_green_01;
             }
@@ -246,6 +286,10 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
               cursor: pointer;
               position: relative;
               padding-left: 2em;
+              @media screen and (max-width:768px) { 
+                font-size: 16px;
+                line-height: 25px;
+              }
               &:hover {
                 background-color: $theme_green_04;
               }
@@ -276,8 +320,9 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
             .submenu {
               display: none;
               .dropdown-item  {
-                padding: 1em 3.5em;
+                padding: 1em 1.5em;
                 background-color: $theme_green_05;
+                white-space: normal;
                 &:hover {
                   background-color: $theme_green_01;
                 }
@@ -315,7 +360,7 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
   position: fixed;
   bottom: 10px;
   right: 15px;
-  z-index: 99;
+  z-index: $zindex-tooltip;
   .toast-header {
     background: $theme_hot_pink_01;
     color: $white;

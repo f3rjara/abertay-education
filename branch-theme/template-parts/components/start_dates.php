@@ -32,5 +32,23 @@
         </div>
       <?php endforeach; ?>
     </div>
+    <!-- CTA BUTTON FOR PROGRAMS SLIDER  -->
+    <?php $link = $sub_start_dates['act_button'];  if( $link ): 
+        $link_url = $link['url'];
+        $link_title = $link['title'];
+        $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+    <div class="row mt-3 mt-lg-5">
+      <div class="col-12 text-center">
+        <a  class="btn btn-abertay" 
+            aria-label="<?php echo esc_html( $link_title ); ?>" 
+            href="<?php echo esc_url( $link_url ); ?>" 
+            target="<?php echo esc_attr( $link_target ); ?>">
+            <?php echo esc_html( $link_title ); ?>
+        </a>
+      </div>
+    </div>
+    <?php endif; ?>
+    <!-- END CTA BUTTON FOR PROGRAMS SLIDER  -->
   </div>
 </section>
