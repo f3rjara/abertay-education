@@ -8,6 +8,8 @@
   $dark_mode = $sub_modules['dark_mode_section'] ? 'dark-mode' : '';
   $repeater_modules = $sub_modules['repeater_modules'];
   $title_tab = $sub_modules['default_title_tab'];
+
+  $uniqId = uniqid();
 ?>
 
 <section  class="section-modules-programm py-abertay <?= $hidden_section ?> <?= $dark_mode ?> <?= $class_custom_section ?>"
@@ -29,9 +31,9 @@
           <?php if( $repeater_modules): foreach ( $repeater_modules as $key => $module ) :?>
             <li class="nav-item" role="presentation">
               <button class="nav-link <?php if( $key == 0) echo 'active'?>" 
-                      id="pills-<?= $key ?>-tab" data-bs-toggle="pill" 
-                      data-bs-target="#pills-<?= $key ?>" type="button" role="tab" 
-                      aria-controls="pills-<?= $key ?>" aria-selected="true">
+                      id="pills-<?=$uniqId?>-<?= $key ?>-tab" data-bs-toggle="pill" 
+                      data-bs-target="#pills-<?=$uniqId?>-<?= $key ?>" type="button" role="tab" 
+                      aria-controls="pills-<?=$uniqId?>-<?= $key ?>" aria-selected="true">
                 <?= $title_tab.' '.($key+1) ?>
               </button>
             </li>
@@ -42,8 +44,8 @@
         <div class="tab-content" id="pills-tabContent">
           <?php if( $repeater_modules): foreach ( $repeater_modules as $key => $module ) :?>
             <div  class="tab-pane fade <?php if( $key == 0) echo 'show active'?>" 
-                  id="pills-<?= $key ?>" role="tabpanel"
-                  aria-labelledby="pills-<?= $key ?>-tab">
+                  id="pills-<?=$uniqId?>-<?= $key ?>" role="tabpanel"
+                  aria-labelledby="pills-<?=$uniqId?>-<?= $key ?>-tab">
               <h5 class="title-module"><?= $module['title_module'] ?></h5>
               <hr class="separator">
               <p class="description-module text-p2"><?= $module['description_module'] ?></p>

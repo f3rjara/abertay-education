@@ -258,6 +258,7 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
               }
               &.show {
                 background-color: $theme_green_01;
+                color: $white;
                 &:after {
                   transform-origin: center center;
                   top: 55%;
