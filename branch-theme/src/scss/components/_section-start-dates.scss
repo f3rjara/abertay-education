@@ -11,8 +11,13 @@
   .col-date {
     display: flex;
     justify-content: center;
+    align-items: center;
     .icon-date {
       margin-right: 15px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      object-position: center center;
     }
     .content-date {
       min-width: 190px;

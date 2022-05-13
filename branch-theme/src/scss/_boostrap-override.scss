@@ -1,20 +1,19 @@
-/* $grid-columns:      12;
-$grid-gutter-width: 1.5rem; */
+$grid-columns:      12;
+$grid-gutter-width: 30px;
 
-/* $grid-breakpoints: (
-  xs: 320,
+$grid-breakpoints: (
+  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1440px,
-  xxl: 1600px
-); */
+  xl: 1200px,
+  xxl: 1360px,
+);
 
-/* $container-max-widths: (
+$container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1380px,
-  xxl: 1520px
+  lg: 980px,
+  xl: 1180px,
+  xxl: 1300px
 );
- */

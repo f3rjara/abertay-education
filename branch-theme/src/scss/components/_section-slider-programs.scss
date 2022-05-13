@@ -9,6 +9,7 @@
     padding-bottom: 45px;
     .splide__track {
       cursor: grab;
+      padding: 1em;
       &:active {
         cursor: grabbing;
       }
