@@ -59,6 +59,7 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
         position: absolute;
         left: 10%;
         width: 80%;
+        max-width: 30px;
         height: $bar-h;
         background-color: $bar-color;
         transition: .2s;
@@ -68,12 +69,16 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
         &:nth-child(3) { top: 100%; }
         @media (max-width: 768px) { 
           left: 0%;
-          width: 100%;
+          width: 30px;
         }
 
       }
       &.active {
         b {
+          @media (max-width: 768px) { 
+            left: 0%;
+            width: 23px;
+          }
           &:nth-child(1) {
             top: 10px;
             transform: rotate(225deg);

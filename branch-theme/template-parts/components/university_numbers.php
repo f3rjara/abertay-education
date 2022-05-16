@@ -33,13 +33,13 @@
       <?php if( $repeat_numbers ): foreach ( $repeat_numbers as $key => $item  ) : ?>
         <div class="col-12 col-md-3 col-lg-2 col-percentage">
           <div class="single-chart">
+            <div class="percentage"><?= $item['number_text'] ?> </div>
             <svg viewBox="0 0 36 36" class="circular-chart">
               <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
               <path class="circle" stroke-dasharray="<?= $item['number_percentage'] ?>, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-              <text x="18" y="20.35" class="percentage"><?= $item['number_text'] ?></text>
             </svg>
-            <p class="description-percentage text-center"><?= $item['description'] ?></p>
           </div>
+          <p class="description-percentage text-center"><?= $item['description'] ?></p>
         </div>
       <?php endforeach; endif; ?>
     </div>

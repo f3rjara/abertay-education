@@ -50,9 +50,9 @@
       flex-direction: column;
       justify-content: center;
       .primary-title {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         @media screen and (max-width:992px) {
-          margin-bottom: 15px;
+          margin-bottom: 0px;
           font-size: 38px;
           line-height: 40px;
           span {
@@ -62,10 +62,13 @@
         }
       }
       .subtitle-title {
-        margin-bottom: 20px;
-        @media screen and (max-width:992px) {
-          margin-bottom: 15px;
-        }
+        margin-bottom: 15px;
+        margin-top: 5px;
+      }
+      .flex_text_caption {
+        font-weight: 400;
+        margin-bottom: 15px;
+        margin-top: 5px;
       }
       .list-features {
         list-style: none;
