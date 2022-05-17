@@ -68,6 +68,9 @@
       }
       .title {
         margin-right: 10px;
+        @media screen and (max-width:992px) {
+          color: $theme_gray_02;
+        }
       }
       .menu {
         list-style: none;
@@ -106,6 +109,11 @@
     }
 
     .col-contact {
+      h5 {
+        @media screen and (max-width:992px) {
+          color: $theme_gray_02;
+        }
+      }
       .list-contact {
         list-style: none;
         margin: 0;
@@ -130,6 +138,7 @@
         margin: 10px 0;
       }
     }
+
     .col-image-footer  {
       .img-footer-abertay {
         max-width: 100%;

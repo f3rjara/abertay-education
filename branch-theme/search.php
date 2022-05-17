@@ -4,52 +4,59 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package starter_theme
+ * @package ABERTAY
  */
-
-get_header();
+  get_header();
+  $s = get_search_query();
 ?>
 
-  <section id="primary" class="content-area">
-    <main id="main" class="site-main">
+  <main id="taxonomy-page" class="site-main taxonomy-page">
+    <section>
 
-    <?php if ( have_posts() ) : ?>
+      <div class="container py-abertay">
+        <div class="row">
+          <div class="col-sm-12">
+            <?php
+              if ( have_posts() ) : ?>
+                <div class="row pt-4 row-post d-flex justify-content-center">
+                <h3 class="acg_primary_text ps-0">
+                  Search results for: <span class="acg_text_gray title-h2"><?php echo $s; ?></span>
+                </h3>
+                <hr class="separator-text"> <br>
+                <p class="ps-0">
+                  <?php esc_html_e( 'Nothing matches your search terms? Please try again with a few different keywords.', 'abertay' ); ?>
+                </p>
+                <div class="form-div mb-5 ps-0">
+                  <?php  get_search_form(); ?>
+                </div>
+                <section class="section-card-post-list">
+                  <div class="row pt-4 d-flex justify-content-center"> 
+                    <?php
+                      while ( have_posts() ) : the_post();
+                        $type = get_post_type( get_the_ID() );
+                        echo '<div class="col-12 col-md-6 col-lg-4 my-2">';
+                        if( $type == 'programs') :
+                          get_template_part( 'template-parts/partials/programm_card', 'content' );
+                        else : 
+                          get_template_part( 'template-parts/partials/card-single-post', 'content' );
+                        endif;
+                        echo '</div>';
+                      endwhile; 
+                    ?>
+                    </div>
+                  </div>
+                </section>
+                
+            <?php 
+              else: 
+                get_template_part( 'template-parts/content', 'none' );
+              endif;	
+            ?>
+          </div>
+        </div>
+      </div>
 
-      <header class="page-header">
-        <h1 class="page-title">
-          <?php
-          /* translators: %s: search query. */
-          printf( esc_html__( 'Search Results for: %s', 'starter_theme' ), '<span>' . get_search_query() . '</span>' );
-          ?>
-        </h1>
-      </header><!-- .page-header -->
+    </section>
+  </main>
 
-      <?php
-      /* Start the Loop */
-      while ( have_posts() ) :
-        the_post();
-
-        /**
-         * Run the loop for the search to output the results.
-         * If you want to overload this in a child theme then include a file
-         * called content-search.php and that will be used instead.
-         */
-        get_template_part( 'template-parts/content', 'search' );
-
-      endwhile;
-
-      the_posts_navigation();
-
-    else :
-
-      get_template_part( 'template-parts/content', 'none' );
-
-    endif;
-    ?>
-
-    </main><!-- #main -->
-  </section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

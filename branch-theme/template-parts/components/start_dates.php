@@ -23,7 +23,7 @@
     </div>
     <div class="row mx-2 mx-xl-0 d-flex justify-content-center mt-3">
       <?php foreach ( $repeater_dates as $key => $date ): $image = $date['icon']; ?>
-        <div class="col-12 col-lg-4 col-xl-auto col-date">
+        <div class="col-12 col-lg-4 col-xl-auto col-date d-flex justify-content-center align-items-center">
           <?= wp_get_attachment_image( $image['ID'], 'full', false, array('class' => 'icon-date') );?>
           <div class="content-date">
             <h4 class="title-date"><?= $date['title_date'] ?></h4>

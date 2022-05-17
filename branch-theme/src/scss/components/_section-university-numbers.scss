@@ -16,6 +16,7 @@
     .single-chart {
       justify-content: center ;
       transition: 1s ease-in-out;
+      position: relative;
       .circular-chart {
         display: block;
         margin: 15px auto;
@@ -37,18 +38,7 @@
           stroke: $theme_mint_green_01; 
           transition: 1s ease-in-out;
         }
-        .percentage {
-          fill: $theme_mint_green_01;
-          font-size: 0.6em;
-          text-anchor: middle;
-          font-weight: 700;
-        }
-      }
-      .description-percentage {
-        color: $theme_mint_green_01;
-        margin-bottom: 0;
-        font-family: $font_primary;
-        font-weight: 400;
+        
       }
       &:hover {
         transform: translateY(-10px);
@@ -60,8 +50,25 @@
           }
         }
       }
+      .percentage {
+        color: $theme_mint_green_01;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 42px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 90px;
+      }
     }
-    
+    .description-percentage {
+      color: $theme_mint_green_01;
+      margin-bottom: 0;
+      font-family: $font_primary;
+      font-weight: 400;
+    }
     @keyframes progress { 0% {  stroke-dasharray: 0 100;  }   }
     
   }

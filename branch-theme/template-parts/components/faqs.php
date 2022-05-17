@@ -3,7 +3,7 @@ $sub_faqs = get_sub_field('sub_faqs');
 $id_unique = uniqid();
 
 $render_global_content = $sub_faqs['render_global_content'];
-if( $render_global_content ) { $content_sub_faqs = $sub_faqs; }
+if( !$render_global_content ) { $content_sub_faqs = $sub_faqs; }
 else {
   // Check value exists. ACF Flexible
   if( have_rows('sections_global_in_page', 'options') ):

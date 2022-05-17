@@ -32,7 +32,13 @@
       'page_title' 	  => '404 Settings',
       'menu_title'	  => '404 Page',
       'parent_slug'	  => 'theme-settings',
-    ));  
+    ));
+
+    acf_add_options_sub_page(array(
+      'page_title' 	  => 'ABERTAY: Programs Page Builder',
+      'menu_title'	  => 'ABERTAY Programs Page Builder',
+      'parent_slug'	  => 'edit.php?post_type=programs',
+    )); 
 
   }
 ?>

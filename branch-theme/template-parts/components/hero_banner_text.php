@@ -49,6 +49,11 @@
                   <?= $content['text_subtitle'] ?>
               </h2>
             <?php endif;
+            if( $content['acf_fc_layout'] == 'flex_text_caption') : ?>
+              <h4 class="flex_text_caption theme_mint_green_05_text" ">
+                  <?= $content['text_caption'] ?>
+              </h4>
+            <?php endif;
             if( $content['acf_fc_layout'] == 'flex_repeater_features') :  
                 $features = $content['repeater_features'];
                 if( $features ) : ?>
