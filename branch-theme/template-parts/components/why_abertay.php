@@ -16,16 +16,16 @@ $features_abertay = $sub_why_abertay['repeater_feautures'];
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-12 col-lg-7">
-        <h2 class="title-primary text-center"><?= $sub_why_abertay['title_primary'] ?></h2>
+        <h2 class="title-primary text-center mb-4"><?= $sub_why_abertay['title_primary'] ?></h2>
         <?php if( strlen( $sub_why_abertay['caption_text'] ) > 0 ) :?>
-          <p class="caption-text mt-4 text-center">
+          <p class="caption-text mb-4 text-center">
             <?= $sub_why_abertay['caption_text'] ?>
           </p>
         <?php endif; ?>
       </div>
     </div>
     <?php if( $features_abertay ): ?>
-      <div class="row row-features mt-5 d-flex justify-content-center">
+      <div class="row row-features d-flex justify-content-center">
         <?php foreach ( $features_abertay as $key => $feature ) : ?>
           <div class="col-12 col-lg-4 col-xl-3 col-feature">
             <h2 class="title-primary text-center"><?= $feature['ttile'] ?></h2>
