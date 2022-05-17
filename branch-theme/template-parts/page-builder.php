@@ -68,3 +68,11 @@
   if( get_row_layout() == 'sub_component_tuition_fees' ):
     get_template_part('template-parts/components/tuition_fees');
   endif;
+
+  if( get_row_layout() == 'sub_component_navigation_section' ):
+    get_template_part('template-parts/components/navigation_for_section');
+  endif;
+
+  if( get_row_layout() == 'sub_component_thank_page' ):
+    get_template_part('template-parts/components/thank_you_page');
+  endif;

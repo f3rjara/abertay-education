@@ -5,8 +5,8 @@
  * @package branch_theme
 */
 
-//define( 'WP_ENVIRONMENT_TYPE', 'development');
-define( 'WP_ENVIRONMENT_TYPE', 'production');
+define( 'WP_ENVIRONMENT_TYPE', 'development');
+//define( 'WP_ENVIRONMENT_TYPE', 'production');
 
 /**
  * Init Theme defaults and registers support

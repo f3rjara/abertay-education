@@ -1,0 +1,52 @@
+.section-thank-you-page { 
+  padding-top: 90px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media screen and (max-width:768px) {
+    background-size: cover;
+  }
+  
+  .primary-title {
+    text-align: center;
+    font-family: $font_primary;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 180px;
+    color: $white;
+    @media screen and (max-width:992px) {
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 130px;
+    }
+    @media screen and (max-width:520px) {
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 105%;
+    }
+  }
+  .subtitle-page {
+    text-align: center;
+    color: $white;
+    @media screen and (max-width:520px) {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 110%;
+      margin-top: 30px;
+    }
+  }
+  .text-caption {
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: $font_primary;
+  }
+  .btn {
+    min-width: 230px;
+  }
+}

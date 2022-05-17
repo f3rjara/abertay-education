@@ -1,0 +1,103 @@
+.navigation-sections{
+  min-height: 80px;
+  box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: .1);
+  position: sticky;
+  top: 90px;
+  background: $white;
+  z-index: 99;
+
+  @media (max-width: 1200px) {
+    .list-navigation {
+      white-space: nowrap !important;
+      overflow-x: scroll;
+      flex-wrap: initial;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #90A4AE #CFD8DC;
+        /* width */
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 11px;
+        background: $white;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background: $theme_gray_04;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $theme_hot_pink_01; 
+        border-radius: 10px;
+        border: 3px solid $theme_gray_04;
+        &:hover {
+          background: $theme_hot_pink_03;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1331px) {
+    position: sticky;
+    top: 119px;
+  }
+
+  @media (max-width: 992px) {
+    position: sticky;
+    top: 70px;
+  }
+  .row-list {
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:992px) { 
+      justify-content: start;
+    }
+    .list-navigation {
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+      @media (max-width: 992px) {
+        justify-content: start;
+        adding-bottom: 0;
+      }
+      .nav-item  {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        .nav-link {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: $theme_purple_01;
+          font-family: $font_primary;
+          padding: 10px 15px;
+          border-radius: 0;
+          border-bottom: 2px solid $white;
+          &.active {
+            border-bottom: 2px solid $theme_purple_01;
+            background-color: transparent;
+            font-weight: 700;
+          }
+          &:hover {
+            border-bottom: 2px solid $theme_purple_01;
+            color: $theme_purple_01;
+            font-weight: 700;
+          }
+          @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            min-width: 130px;
+          }
+
+        }
+      }
+    }
+  }
+}
