@@ -11,6 +11,7 @@
       .description-text {
         padding: 0.5em 1em;
         color: $theme_purple_01;
+        font-family: $font_primary;
         @media screen and (max-width: 992px) { 
           padding-bottom: 20px;
           border-bottom: 3px dashed #979797b3;
