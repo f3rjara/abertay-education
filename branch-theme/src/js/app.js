@@ -1,4 +1,4 @@
-import { scrollFunction, nabvar_movil, show_form_search, formSearchBanner ,  hiddenSubmenus, loadMenuLevel, controlesubmenuDesktop } from './global/_header';
+import { scrollFunction, nabvar_movil, show_form_search, formSearchBanner ,  hiddenSubmenus, loadMenuLevel, controlesubmenuDesktop, showMenuHover } from './global/_header';
 import { load_video_local } from './components/_flexible_multimedia';
 import { splide_carrousel } from './components/_splide_carrousel';
 
@@ -11,6 +11,7 @@ window.onload = function () {
   theme_mode(); 
   loadMenuLevel();
   hiddenSubmenus();
+  showMenuHover();
   nabvar_movil();
   show_form_search();
   formSearchBanner();

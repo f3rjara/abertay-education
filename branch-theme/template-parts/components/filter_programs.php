@@ -35,7 +35,7 @@
 
         <ul class="list-items-filters nav nav-tabs"  id="tabsFilters" role="tablist">
           <!-- TITLE FILTER -->
-          <li class="nav-item" role="presentation">
+          <!-- <li class="nav-item" role="presentation">
             <button class="nav-link" id="filter-tab" type="button" role="tab">
               Filter 
               <div class="svg-icon">
@@ -46,7 +46,7 @@
                 </svg>
               </div>
             </button>
-          </li>
+          </li> -->
           <!--  ********** REPEATER FOR TABS FILTER PROGRAMM CATEGORY ************************* -->
           <?php if( $repetaer_filter ): foreach ( $repetaer_filter  as $key => $filter ): ?>
             <li class="nav-item" role="presentation">

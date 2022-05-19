@@ -73,7 +73,7 @@
               background: $theme_green_02;
               top: 0;
               right: 0;
-              transform: translateX(99%);
+              transform: translateX(100%);
               position: absolute;
               z-index: 21;
               min-width: 100%;
@@ -111,8 +111,8 @@
 }
 
 @keyframes showSubmenu {
-  from { transform: translateX(0);}
-  to { transform: translateX(99%);}
+  from { transform: translateX(80%);}
+  to { transform: translateX(100%);}
 }
 
 .navbar-abertay-scroll-show {
