@@ -13,6 +13,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    border: none;
     .nav-item  {
       padding-bottom: 3px;
       border-bottom: 1px dashed $theme_gray_02;

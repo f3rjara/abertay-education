@@ -31,7 +31,8 @@
           padding: 2em 1em;
           .dropdown-item {
             color: $white;
-            padding: 0.5em 1.5em;
+            padding: 0.5em 0.5em;
+            padding-right: 3em;
             margin-bottom: 6px;
             transition: .5s ease-in-out;
             position: relative;
@@ -72,7 +73,7 @@
               background: $theme_green_02;
               top: 0;
               right: 0;
-              transform: translateX(99%);
+              transform: translateX(100%);
               position: absolute;
               z-index: 21;
               min-width: 100%;
@@ -87,9 +88,9 @@
                 color: $theme_mint_green_05;
                 &:after {
                   content: '';
-                  width: 80%;
+                  width: 97%;
                   position: absolute;
-                  left: 10%;
+                  left: 3%;
                   bottom: 2px;
                   border-width: 0 0 1px;
                   border-style: solid;
@@ -110,8 +111,8 @@
 }
 
 @keyframes showSubmenu {
-  from { transform: translateX(0);}
-  to { transform: translateX(99%);}
+  from { transform: translateX(80%);}
+  to { transform: translateX(100%);}
 }
 
 .navbar-abertay-scroll-show {

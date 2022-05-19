@@ -8,6 +8,7 @@ $class_custom_section = $sub_why_abertay['class_custom_section'];
 $bg_color_section = $sub_why_abertay['background_color_section'];
 $dark_section_mode = $sub_why_abertay['dark_section_mode'] ? 'dark-mode-section' : '';
 $features_abertay = $sub_why_abertay['repeater_feautures'];
+$text_bracketed  = $sub_why_abertay['text_bracketed'];
 ?>
 
 <section  class="section-why-abertay py-abertay <?= $hidden_section ?> <?= $dark_section_mode ?> <?= $class_custom_section ?>"
@@ -34,6 +35,13 @@ $features_abertay = $sub_why_abertay['repeater_feautures'];
             </p>
           </div>
         <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
+    <?php if( strlen($text_bracketed) > 0 ): ?>
+      <div class="row d-flex justify-content-center mt-4">
+        <div class="col-12 col-lg-9 px-lg-4">
+          <p class="caption-regular"><?= $text_bracketed ?></p>
+        </div>
       </div>
     <?php endif; ?>
   </div>
