@@ -153,6 +153,36 @@ function controlesubmenuDesktop() {
   });
 }
 
+// Menu in Hover for Menu Desktop
+function showMenuHover() {
+  let menuPrimary = document.querySelector('.abertay-menu-desktop .dropdown .dropdown-toggle');
+  let submenus  = document.querySelectorAll('.abertay-menu-desktop .dropdown-item.is-menu-item');
+  let entryHover = false;
+
+  if ( menuPrimary) {
+    if (window.innerWidth > 992) {
+      menuPrimary.addEventListener( 'mouseover', function () {
+        entryHover = true;
+        menuPrimary.click();
+      });
+      window.addEventListener('scroll', function() {
+        if ( entryHover || menuPrimary.classList.contains('show') ) {
+          menuPrimary.click();
+          entryHover = false;
+        }
+      });
+    }
+  }
+  if( submenus ) {
+    submenus.forEach( submenu  => {
+      submenu.addEventListener( 'mouseover', function () {
+        submenu.click();
+      });
+    });
+  }
+}
+
+
 export { 
   scrollFunction,
   nabvar_movil,
@@ -160,5 +190,6 @@ export {
   formSearchBanner,
   hiddenSubmenus,
   loadMenuLevel,
-  controlesubmenuDesktop
+  controlesubmenuDesktop,
+  showMenuHover
 };

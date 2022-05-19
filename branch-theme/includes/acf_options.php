@@ -37,7 +37,7 @@
     acf_add_options_sub_page(array(
       'page_title' 	  => 'ABERTAY: Programs Page Builder',
       'menu_title'	  => 'ABERTAY Programs Page Builder',
-      'parent_slug'	  => 'edit.php?post_type=programs',
+      'parent_slug'	  => 'edit.php?post_type=programmes',
     )); 
 
   }
