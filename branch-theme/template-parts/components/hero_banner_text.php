@@ -1,5 +1,9 @@
 <?php
-  $sub_hero_banner_text = get_sub_field('sub_hero_banner_text');
+  if( count($args) > 0 ) 
+    $sub_hero_banner_text = $args['hero_clone'];
+  else 
+    $sub_hero_banner_text = get_sub_field('sub_hero_banner_text');
+  
   /* CONFIGURATION SECTION */
   $hidden_section = $sub_hero_banner_text['visible_section'] ? 'd-none' : 'd-block';
   $id_section = $sub_hero_banner_text['id_section'];

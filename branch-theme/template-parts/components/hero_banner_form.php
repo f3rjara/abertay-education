@@ -1,5 +1,6 @@
 <?php
   $sub_hero_banner_form = get_sub_field('sub_hero_banner_form');
+  
   /* CONFIGURATION SECTION */
   $hidden_section = $sub_hero_banner_form['visible_section'] ? 'd-none' : 'd-block';
   $id_section = $sub_hero_banner_form['id_section'];
