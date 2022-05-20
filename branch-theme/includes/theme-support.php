@@ -35,7 +35,10 @@ if ( ! function_exists( 'branch_theme_setup' ) ) :
     $locations = ( array (
       'menu-branch-primary'  =>   esc_html__( 'Primary Menu', 'Branch' ), 
       'menu-branch-footer'   =>   esc_html__( 'Primary Footer', 'Branch' ),
-      'menu-branch-terms'    =>   esc_html__( 'Primary Terms', 'Branch' )
+      'menu-branch-terms'    =>   esc_html__( 'Primary Terms', 'Branch' ),
+      'menu-branch-landing-primary'    =>   esc_html__( 'Primary Menu Landing', 'Branch' ),
+      'menu-branch-landing-footer'    =>   esc_html__( 'Primary Footer Landing', 'Branch' ),
+      'menu-branch-landing-terms'    =>   esc_html__( 'Primary Terms Landing', 'Branch' )
     ) );
 
     register_nav_menus( $locations );

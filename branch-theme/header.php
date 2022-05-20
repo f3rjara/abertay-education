@@ -31,9 +31,17 @@
     <?php  
       $abertay_menu_desktop = get_field('abertay_menu_desktop', 'options');
       if( $abertay_menu_desktop ) :
-        get_template_part( 'template-parts/main-header', 'content' );
+        if( is_page_template( 'template-landings-page.php' )  ) {
+          get_template_part( 'template-parts/main-header-landings', 'content' );
+        } else {
+          get_template_part( 'template-parts/main-header', 'content' );
+        }
       else :
-        get_template_part( 'template-parts/main-header-desktop', 'content' ); 
+        if( is_page_template( 'template-landings-page.php' )  ) {
+          get_template_part( 'template-parts/main-header-landings-desktop', 'content' ); 
+        } else {
+          get_template_part( 'template-parts/main-header-desktop', 'content' );
+        }
       endif;
     ?>
   </header>

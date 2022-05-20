@@ -7,7 +7,7 @@
   $bg_color_section = $sub_slider_programs['background_color_section'];
   $partial_filter = $sub_slider_programs['partial_filter'];
   /* CONFIGURATION QUERY POST*/
-  $filter_tax = $partial_filter['taxonomy_programs'];
+  $filter_tax = $partial_filter['taxonomy_programs'] ?  $partial_filter['taxonomy_programs'] :  $partial_filter['taxonomy_landings'];
   $terminos_seacrh  = array();
   $category_primary = '';
   if( $filter_tax )  {

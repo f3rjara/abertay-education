@@ -8,7 +8,13 @@
 
 ?>
 
-      <?php  get_template_part( 'template-parts/main-footer', 'content' );  ?>
+      <?php  
+        if( is_page_template( 'template-landings-page.php' )  ) { 
+          get_template_part( 'template-parts/main-footer-landings', 'content' );
+        }  else {
+          get_template_part( 'template-parts/main-footer', 'content' );
+        }
+      ?>
     </div>  <!-- end Site Main Content Div -->
     <?php  wp_footer(); ?>
   </body> <!-- end Body -->
