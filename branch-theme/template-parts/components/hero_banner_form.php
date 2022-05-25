@@ -1,5 +1,6 @@
 <?php
   $sub_hero_banner_form = get_sub_field('sub_hero_banner_form');
+  
   /* CONFIGURATION SECTION */
   $hidden_section = $sub_hero_banner_form['visible_section'] ? 'd-none' : 'd-block';
   $id_section = $sub_hero_banner_form['id_section'];
@@ -46,9 +47,11 @@
             if( $content['acf_fc_layout'] == 'flex_primary_ttile') : ?>
               <h1 class="primary-title <?=  $is_hero_title ? 'hero-title' : '' ?>" 
                   style="color: <?=  $text_color_section ?>">
-                  <span class="append-text-title" style=" color: <?= $accent_color_section ?>">
-                  <?= $content['prepend_text_title'] ?>
-                  </span><br>
+                  <?php if (strlen($content['prepend_text_title'])  > 0 ): ?>
+                    <span class="append-text-title" style=" color: <?= $accent_color_section ?>">
+                    <?= $content['prepend_text_title'] ?>
+                    </span><br>
+                  <?php endif; ?>
                   <?= $content['text_primary_title'] ?>
               </h1>
             <?php endif;

@@ -3,8 +3,10 @@
 $abertay_logo_white = get_field('abertay-logo-white', 'options');
 $abertay_logo_color = get_field('abertay-logo-color', 'options');
 $size = 'full';
+$is_landing_page  = $args['is_landing_page'];
 
-$menu_primary = wp_get_menu_array('menu-branch-primary');
+$menu_primary = $is_landing_page ?  wp_get_menu_array('menu-branch-landing-primary') : wp_get_menu_array('menu-branch-primary') ;
+$show_movil = count($menu_primary) > 0 ? '' :'d-none';
 
 $cta_navbar_primary = get_field('abertay_cta_navbar_primary', 'options');
 if ($cta_navbar_primary) :
@@ -16,10 +18,10 @@ endif;
 
 <nav class="navbar navbar-expand-lg navbar-abertay" id="navbar-abertay-primary" role="navigation" aria-current="true">
   <div class="container">
-    <div class="row w-100">
+    <div class="row w-100 justify-content-around">
       <!-- LOGO SITE MAIN -->
       <div class="col-8 col-lg-7 d-flex justify-content-start align-items-center">
-        <a href="/" aria-label="Abertay Univeristy" class="target_logo">
+        <a <?php if( !$is_landing_page ) echo 'href="/"'; ?> aria-label="Abertay Univeristy" class="target_logo">
           <?php  if ($abertay_logo_white) {
             echo wp_get_attachment_image($abertay_logo_white['ID'], $size, false, array('class' => "abertay_logo_white logo-navbar"));
           }  if ($abertay_logo_color) {
@@ -29,16 +31,18 @@ endif;
       </div>
       <!-- CTA ACTION NAVBAR -->
       <div class="col-3 col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
-        <a  class="btn btn-abertay btn-abertay-medium px-5" 
+        <a  class="bg-transparent"
             href="<?php echo esc_url( $link_url_secondary ); ?>"
             target="<?php echo esc_attr( $link_target_secondary ); ?>"
             aria-label="<?php echo esc_html( $link_title_secondary ); ?>" 
             type="button" >
-                <?php echo esc_html( $link_title_secondary ); ?>
+            <button type="button" class="btn btn-abertay btn-abertay-medium px-5 m-0">
+              <?php echo esc_html( $link_title_secondary ); ?>
+            </button>
         </a>
       </div>
       <!-- BTN CALL TO FORM SEARCH -->
-      <div class="col-2 col-lg-1 d-flex justify-content-end align-items-center">
+      <div class="col-2 col-lg-1 d-flex justify-content-end align-items-center <?php if( $is_landing_page ) echo 'd-none' ?>">
         <button class="btn button-search-toogle" 
                   id="button-search-toogle"
                   aria-label="Search content" 
@@ -53,7 +57,7 @@ endif;
         </button>        
       </div>
       <!-- BTN TO COLLAPSE MENU -->
-      <div class="col-2 col-lg-1 d-flex justify-content-center align-items-center">
+      <div class="col-2 col-lg-1 d-flex justify-content-center align-items-center <?=$show_movil?>">
         <button class="navbar-toggle-abertay" type="button" aria-label="Toggle navigation">
           <div class="McButton"> <b></b> <b></b> <b></b> </div>
         </button>

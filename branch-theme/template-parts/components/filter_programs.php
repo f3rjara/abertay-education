@@ -78,7 +78,9 @@
                 <!-- FILTER PROGRAMS FOR CATGORY -->
                 <?php              
                 $partial_filter = $filter['partial_filter'];
-                $filter_tax = $partial_filter['taxonomy_programs'];
+
+                $filter_tax = $partial_filter['taxonomy_programs'] ?  $partial_filter['taxonomy_programs'] :  $partial_filter['taxonomy_landings'];
+
                 $terminos_seacrh  = array();
                 $category_primary = '';
                 if( $filter_tax )  {
@@ -104,6 +106,7 @@
                       )
                   ),
                 ));
+
                 ?>
                 <div class="row">
                   <? while ( $the_query->have_posts() ) : $the_query->the_post();

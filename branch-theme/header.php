@@ -29,12 +29,19 @@
 
   <header class="header-site">
     <?php  
-      $abertay_menu_desktop = get_field('abertay_menu_desktop', 'options');
-      if( $abertay_menu_desktop ) :
-        get_template_part( 'template-parts/main-header', 'content' );
+      $abertay_menu_hamburger = get_field('abertay_menu_hamburger', 'options');
+      $abertay_megamenu = get_field('abertay_megamenu', 'options');
+      $isLandingPage = is_page_template( 'template-landings-page.php' ) ? TRUE : FALSE;
+      if( $abertay_menu_hamburger ) :
+        get_template_part( 'template-parts/main-header', 'content', array('is_landing_page' => $isLandingPage) );
       else :
-        get_template_part( 'template-parts/main-header-desktop', 'content' ); 
+        if ( $abertay_megamenu ): 
+          get_template_part( 'template-parts/main-header-megamenu', 'content', array('is_landing_page' => $isLandingPage) );
+        else :
+          get_template_part( 'template-parts/main-header-desktop', 'content', array('is_landing_page' => $isLandingPage) );
+        endif;
       endif;
+      
     ?>
   </header>
 

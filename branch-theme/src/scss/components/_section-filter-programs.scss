@@ -39,6 +39,7 @@
         }
         &.isfilter {
           cursor: pointer;
+          text-align: left;
           &.active {
             background-color: $theme_hot_pink_02;
             color: $white;

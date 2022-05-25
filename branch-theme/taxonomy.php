@@ -39,13 +39,20 @@
               <?php endif; ?>
 
               <?php if ( have_posts() ): ?>
-                <div class="row pt-4 row-post d-flex justify-content-center">
-                  <?php 
-                    while ( have_posts() ) : the_post();
-                        get_template_part( 'template-parts/content', 'content' );
-                    endwhile; 
-                  ?>
-                </div>
+                <div class="row pt-4 d-flex justify-content-center"> 
+                    <?php
+                      while ( have_posts() ) : the_post();
+                        $type = get_post_type( get_the_ID() );
+                        echo '<div class="col-12 col-md-6 col-lg-4 my-2">';
+                        if( $type == 'programmes') :
+                          get_template_part( 'template-parts/partials/programm_card', 'content' );
+                        else : 
+                          get_template_part( 'template-parts/partials/card-single-post', 'content' );
+                        endif;
+                        echo '</div>';
+                      endwhile; 
+                    ?>
+                    </div>
               <?php else: ?>
 
                 <h2 class="post-title">
