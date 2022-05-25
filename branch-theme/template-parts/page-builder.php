@@ -80,3 +80,8 @@
   if( get_row_layout() == 'sub_component_list_programs' ):
     get_template_part('template-parts/components/list_programs');
   endif;
+
+  if( get_row_layout() == 'sub_component_fees_table' ):
+    get_template_part('template-parts/components/fess_table');
+  endif;
+  

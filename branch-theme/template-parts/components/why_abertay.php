@@ -29,6 +29,10 @@ $text_bracketed  = $sub_why_abertay['text_bracketed'];
       <div class="row row-features d-flex justify-content-center">
         <?php foreach ( $features_abertay as $key => $feature ) : ?>
           <div class="col-12 col-lg-4 col-xl-3 col-feature">
+            <?php 
+            if( $feature['image']  ): $image = $feature['image'] ;
+              echo wp_get_attachment_image( $image['ID'], 'full', false, array('class' => 'icon-feature') );
+            endif; ?>            
             <h2 class="title-primary text-center"><?= $feature['ttile'] ?></h2>
             <p class="caption-text mt-3 mb-lg-0 text-center description-text">
               <?= $feature['description'] ?>

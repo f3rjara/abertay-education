@@ -1,0 +1,42 @@
+.section-fees-table {
+  .title-section, .title-caption {
+    color: $theme_purple_01;
+  }
+  .caption-text {
+    color: $theme_black;
+  }
+  .col-featues {
+    .table {
+      .row-title {
+        background-color: rgba($color: $theme_green_05, $alpha: .3);
+        td {
+          color: $black;
+          font-weight: 700;
+          font-family: $font_primary;
+        }
+      }
+      .row-description{
+        background-color: rgba($color: $theme_green_05, $alpha: .1);
+        td {
+          color: $black;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  &.dark-mode-section {
+    .title-caption {
+      color: $theme_purple_05;
+    }
+    .caption-text, .title-section {
+      color: $theme_gray_05;
+    }
+    .col-featues {
+      .table {
+        td {
+          color: $theme_gray_05;
+        }
+      }
+    }
+  }
+}

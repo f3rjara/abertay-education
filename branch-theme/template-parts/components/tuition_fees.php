@@ -10,8 +10,8 @@
   $isSmall = count( $repeater_content )  < 4 ? 'tabs-small' : '';
   $id_uniq = uniqid();
 ?>
-
-<section class="section-navigation-tuition-fees">
+<?php if( count($repeater_content) > 1 ):?>
+<section class="section-navigation-tuition-fees <?= $hidden_section ?> <?= $class_custom_section ?>">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -32,7 +32,7 @@
     </div>
   </div>
 </section>
-
+<?php endif; ?>
 <section  class="section-tuition-fees py-abertay <?= $hidden_section ?> <?= $class_custom_section ?>"
           id="<?= $id_section ?>"
           style="background-color: <?= $bg_color_section ?>;">
@@ -55,9 +55,10 @@
           </div>
         </div>
         <!-- END TITLES IN SECTION -->
-        <div class="row d-flex justify-content-center my-4">
-          <?php $features = $tabItem['repeater_features']; ?>
-          <?php if ( $features ): foreach ( $features as $key => $item ) : ?>
+        <?php $features = $tabItem['repeater_features']; ?>
+          <?php if ( $features ): ?>
+          <div class="row d-flex justify-content-center my-4">
+            <?php foreach ( $features as $key => $item ) : ?>
           <div class="col-12 col-md-6 col-lg-auto d-flex align-items-center col-features">
             <?= wp_get_attachment_image( $item['icon'], 'full', false, array('class' => 'img-repeater mx-4') ); ?>
             <div class="content">
@@ -65,8 +66,9 @@
               <h3 class="theme_purple_03_text text-center"><?= $item['description'] ?></h3>
             </div>
           </div>
-          <?php endforeach; endif; ?>
+          <?php endforeach;?>
         </div>
+        <?php endif;  ?>
         <!-- CTA BUTTON FOR PROGRAMS SLIDER  -->
         <?php $link = $tabItem['cta_button'];  if( $link ): 
               $link_url = $link['url'];

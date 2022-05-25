@@ -30,12 +30,13 @@ endif;
       </div>
       <!-- CTA ACTION NAVBAR -->
       <div class="col-3 col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
-        <a  class="btn btn-abertay btn-abertay-medium px-5" 
-            href="<?php echo esc_url( $link_url_secondary ); ?>"
+        <a  class="bg-transparent" href="<?php echo esc_url( $link_url_secondary ); ?>"
             target="<?php echo esc_attr( $link_target_secondary ); ?>"
             aria-label="<?php echo esc_html( $link_title_secondary ); ?>" 
             type="button" >
-                <?php echo esc_html( $link_title_secondary ); ?>
+            <button type="button" class="btn btn-abertay btn-abertay-medium px-5  m-0">
+              <?php echo esc_html( $link_title_secondary ); ?>
+            </button>
         </a>
       </div>
       <!-- BTN CALL TO FORM SEARCH -->
