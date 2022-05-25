@@ -10,9 +10,9 @@
 
       <?php  
         if( is_page_template( 'template-landings-page.php' )  ) { 
-          get_template_part( 'template-parts/main-footer-landings', 'content' );
+          get_template_part( 'template-parts/main-footer', 'content', array('is_landing_page' => TRUE) );
         }  else {
-          get_template_part( 'template-parts/main-footer', 'content' );
+          get_template_part( 'template-parts/main-footer', 'content', array('is_landing_page' => FALSE) );
         }
       ?>
     </div>  <!-- end Site Main Content Div -->
