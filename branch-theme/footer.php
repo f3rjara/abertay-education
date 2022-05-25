@@ -8,12 +8,9 @@
 
 ?>
 
-      <?php  
-        if( is_page_template( 'template-landings-page.php' )  ) { 
-          get_template_part( 'template-parts/main-footer', 'content', array('is_landing_page' => TRUE) );
-        }  else {
-          get_template_part( 'template-parts/main-footer', 'content', array('is_landing_page' => FALSE) );
-        }
+      <?php
+        $isLandingPage = is_page_template( 'template-landings-page.php' ) ? TRUE : FALSE;
+        get_template_part( 'template-parts/main-footer', 'content', array('is_landing_page' => $isLandingPage) );
       ?>
     </div>  <!-- end Site Main Content Div -->
     <?php  wp_footer(); ?>

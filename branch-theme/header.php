@@ -29,19 +29,12 @@
 
   <header class="header-site">
     <?php  
-      $abertay_menu_desktop = get_field('abertay_menu_desktop', 'options');
-      if( $abertay_menu_desktop ) :
-        if( is_page_template( 'template-landings-page.php' )  ) {
-          get_template_part( 'template-parts/main-header-landings', 'content' );
-        } else {
-          get_template_part( 'template-parts/main-header', 'content' );
-        }
+      $abertay_menu_hamburger = get_field('abertay_menu_hamburger', 'options');
+      $isLandingPage = is_page_template( 'template-landings-page.php' ) ? TRUE : FALSE;
+      if( $abertay_menu_hamburger ) :
+        get_template_part( 'template-parts/main-header', 'content', array('is_landing_page' => $isLandingPage) );
       else :
-        if( is_page_template( 'template-landings-page.php' )  ) {
-          get_template_part( 'template-parts/main-header-landings-desktop', 'content' ); 
-        } else {
-          get_template_part( 'template-parts/main-header-desktop', 'content' );
-        }
+        get_template_part( 'template-parts/main-header-desktop', 'content', array('is_landing_page' => $isLandingPage) );
       endif;
     ?>
   </header>
