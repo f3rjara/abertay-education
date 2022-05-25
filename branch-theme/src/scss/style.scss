@@ -6,6 +6,7 @@
 //Global
 @import './global/header_menu';
 @import './global/header_menu_desktop';
+@import './global/header_menu_megamenu';
 @import './global/footer_site';
 //Partials
 @import './partials/partial_container-banner-form';
@@ -31,6 +32,7 @@
 @import './components/section-tuition-fees';
 @import './components/section-navigation-sections';
 @import './components/section-thank-you-page';
+@import './components/section-fees-table';
 //Pages
 @import './global/override_pages';
 @import './global/404_page';

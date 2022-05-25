@@ -30,9 +30,9 @@ endif;
       </div>
       <!-- MAIN MENU FOR DESKTOP  -->
       <div class="col-lg-7 col-xl-6 d-none d-lg-flex justify-content-start align-items-center">
-          <div class="abertay-menu-desktop">
+          <div class="abertay-menu-megamenu">
             <!-- Collapse Menu Primary FOR DESKTOP-->
-            <?php get_template_part('template-parts/layout/collapse_menu_primary_desktop', 'navigation' ,
+            <?php get_template_part('template-parts/layout/collapse_menu_primary_megamenu', 'navigation' ,
                               $args = array('primary_menu' => $menu_primary )); ?>
           </div>
       </div>
