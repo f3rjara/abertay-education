@@ -35,7 +35,7 @@
                       while ( have_posts() ) : the_post();
                         $type = get_post_type( get_the_ID() );
                         echo '<div class="col-12 col-md-6 col-lg-4 my-2">';
-                        if( $type == 'programs') :
+                        if( $type == 'programmes') :
                           get_template_part( 'template-parts/partials/programm_card', 'content' );
                         else : 
                           get_template_part( 'template-parts/partials/card-single-post', 'content' );

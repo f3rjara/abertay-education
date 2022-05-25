@@ -156,7 +156,10 @@ function controlesubmenuDesktop() {
 // Menu in Hover for Menu Desktop
 function showMenuHover() {
   let menuPrimary = document.querySelector('.abertay-menu-desktop .dropdown .dropdown-toggle');
+  menuPrimary = menuPrimary == null ? document.querySelector('.abertay-menu-megamenu .dropdown .dropdown-toggle') : false;
+  console.log( menuPrimary );
   let submenus  = document.querySelectorAll('.abertay-menu-desktop .dropdown-item.is-menu-item');
+  let submenusMega  = document.querySelectorAll('.abertay-menu-megamenu .dropdown-item.is-menu-item');
   let entryHover = false;
 
   if ( menuPrimary) {
@@ -166,19 +169,35 @@ function showMenuHover() {
         menuPrimary.click();
       });
       window.addEventListener('scroll', function() {
-        if ( entryHover || menuPrimary.classList.contains('show') ) {
-          menuPrimary.click();
-          entryHover = false;
+        if ( document.body.scrollTop > 500 || document.documentElement.scrollTop > 500 ) { 
+          if ( entryHover || menuPrimary.classList.contains('show') ) {
+            menuPrimary.click();
+            entryHover = false;
+          }
         }
       });
     }
   }
   if( submenus ) {
-    submenus.forEach( submenu  => {
-      submenu.addEventListener( 'mouseover', function () {
-        submenu.click();
+    if (window.innerWidth > 992) {
+      submenus.forEach( submenu  => {
+        submenu.addEventListener( 'mouseover', function () {
+          submenu.click();
+        });
       });
-    });
+    }
+  }
+  if( submenusMega ){
+    if (window.innerWidth > 992) {
+      submenusMega.forEach( submenu  => {
+        let goSrc = submenu.getAttribute('href');
+        submenu.addEventListener('click', () => {
+          console.log( goSrc );
+          location.href = goSrc;
+        });
+        
+      });
+    }
   }
 }
 
