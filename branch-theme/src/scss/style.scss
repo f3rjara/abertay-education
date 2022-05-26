@@ -13,6 +13,7 @@
 @import './partials/partial_container-ninja-form';
 @import './partials/partial-flexible-multimedia';
 @import './partials/partial-programm-card';
+@import './partials/partial_single-post-card';
 //Components
 @import './components/section-hero-banner-form';
 @import './components/section-hero-banner-text';
@@ -33,6 +34,8 @@
 @import './components/section-navigation-sections';
 @import './components/section-thank-you-page';
 @import './components/section-fees-table';
+@import './components/section-last-post';
+@import './components/section_filter_single_post';
 //Pages
 @import './global/override_pages';
 @import './global/404_page';
