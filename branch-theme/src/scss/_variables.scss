@@ -208,7 +208,9 @@ h1, .title-h1, h1 span, .title-h1 span  {
 
 a {
   text-decoration: none;
+  color: $theme_hot_pink_01;
   &:hover {
-    color: $theme_hot_pink_02;
+    color: $theme_hot_pink_04;
+    text-decoration: underline;
   }
 }
