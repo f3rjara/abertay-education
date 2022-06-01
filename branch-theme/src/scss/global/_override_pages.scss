@@ -1,6 +1,8 @@
 body.page-template-default:not(.error404), 
+body.post-template-default:not(.error404), 
 body.search-no-results:not(.error404),
-body.tax-categories_programs:not(.error404) {
+body.tax-categories_programs:not(.error404),
+body.category:not(.error404)  {
   padding-top: 90px;
   .navbar-abertay {
     background-color: $white;

@@ -7,11 +7,11 @@
   get_header();
 
   $tax = $wp_query->get_queried_object();
-  $taxo = 'Resultados para: '; 
+  $taxo = 'Results For: '; 
 
-  if ( strpos($tax->taxonomy, 'tag') !== false) { $taxo = 'Resultados para la etiqueta: ';  }                
+  if ( strpos($tax->taxonomy, 'tag') !== false) { $taxo = 'Results for Tag: ';  }                
   elseif( strpos($tax->taxonomy, 'category') !== false  || strpos($tax->taxonomy, 'categories') !== false )
-  {  $taxo = 'Resultados para la categoria: '; }
+  {  $taxo = 'Results for Category: '; }
 
 ?>
 
@@ -20,18 +20,18 @@
   <main id="taxonomy-page" class="site-main taxonomy-page">
     <section>
 
-      <div class="container py-abertay">
+      <div class="container py-abertay pt-0">
         <div class="row">
           <div class="col-sm-12">
             <?php
               if ( have_posts() ) : ?>
                 <div class="row pt-4 row-post d-flex justify-content-center">
-                <h3 class="acg_primary_text ps-0">
-                  <?php echo $taxo ?>  <span class="acg_text_gray title-h2"><?php echo apply_filters( 'the_title', __( $tag->name ) ); ?></span>
+                <h3 class="theme_purple_01_text ps-0">
+                  <?php echo $taxo ?>  <span class="theme_hot_pink_01_text title-h2"><?php echo apply_filters( 'the_title', __( $tax->name ) ); ?></span>
                 </h3>
                 <hr class="separator-text"> <br>
                 <p class="ps-0">
-                  <?php esc_html_e( '¿Nada coincide con sus términos de búsqueda?. Vuelva a intentarlo con algunas palabras clave diferentes.', 'univa' ); ?>
+                  <?php esc_html_e( 'Nothing matches your search terms? Please try again with a few different keywords.', 'Abertay' ); ?>
                 </p>
                 <div class="form-div mb-5 ps-0">
                   <?php  get_search_form(); ?>
@@ -45,7 +45,7 @@
                         if( $type == 'programmes') :
                           get_template_part( 'template-parts/partials/card-programm', 'content' );
                         else : 
-                          get_template_part( 'template-parts/partials/card-single-post', 'content' );
+                          get_template_part( 'template-parts/partials/single_post_card', 'content' ); 
                         endif;
                         echo '</div>';
                       endwhile; 
