@@ -19,11 +19,13 @@
       <div class="container py-abertay">
         <div class="row">
           <div class="col-12 col-lg-6">
-            <?= get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-section')); ?>
+            <a href="<?= $post_permalink ?>"  aria-label="<?= get_the_title() ?>" >
+              <?= get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-section')); ?>
+            </a>
           </div>
           <div class="col-12 col-lg-6 d-flex flex-column justify-content-around align-items-start">
             <div class="content-card">
-              <h2 class="title-post"><?= get_the_title(); ?></h2>
+            <a href="<?= $post_permalink ?>"  aria-label="<?= get_the_title() ?>" > <h2 class="title-post"><?= get_the_title(); ?></h2></a>
               <p class="date-post"> <i class='bx bx-calendar'></i> <?php the_time('M j, Y'); ?></p>
               <p class="extract-content card-text"><?= $description_card ?></p>
             </div>

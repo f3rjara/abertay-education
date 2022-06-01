@@ -18,8 +18,10 @@
         <div class="row">
           <div class="col-12">
             <div class="entry-content">
-              <h1><?= the_title() ?></h1>
-              <?= the_content() ?>
+              <h1 class="text-center theme_purple_01_text mb-5"><?= the_title() ?></h1>
+              <div class="content-of-post">
+                <?= the_content() ?>
+              </div>
             </div>
           </div>
         </div>
