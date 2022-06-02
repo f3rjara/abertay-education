@@ -15,10 +15,14 @@
   <main>
     <section class="py-abertay">
       <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           <div class="col-12">
             <div class="entry-content">
               <h1 class="text-center theme_purple_01_text mb-5"><?= the_title() ?></h1>
+            </div>
+          </div>
+          <div class="col-12 col-lg-9">
+            <div class="entry-content">
               <div class="content-of-post">
                 <?= the_content() ?>
               </div>

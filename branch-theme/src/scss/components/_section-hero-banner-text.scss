@@ -1,5 +1,5 @@
 .section-hero-banner-text {
-  padding-top: calc(90px + 45px);
+  padding-top: calc(90px + 25px);
   min-height: 545px;
   position: relative;
   overflow: hidden;
@@ -23,13 +23,13 @@
         min-height: 410px;
         object-fit: cover;
         transition: .5s ease-in-out;
-        @media (min-width: 520px) and (max-width: 1440px) {
+        @media (min-width: 520px) and (max-width: 1600px) {
           height: 100%;
           width: auto;
           object-fit: left;
           left: initial;
           right: 50%;
-          transform: translateX(50%);
+          transform: translateX(48%);
         }
       }
     }

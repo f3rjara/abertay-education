@@ -24,9 +24,12 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
   .target_logo {
     .logo-navbar {
       max-width: 200px;
-      width: 100%;
-      height: auto;
       transition: 1s ease-in-out;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 190px !important;
+      height: 50px !important;
     }
   }
 
@@ -107,7 +110,16 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
     &.navbar-abertay-scroll-show {
       .logo {
         filter: invert(1);
+        transition: .5s ease-in-out;
       }
+      &:hover {
+        .logo {
+          filter: invert(0);
+        }
+      }
+    }
+    &:hover {
+      background-color: $theme_hot_pink_02;
     }
   }
 

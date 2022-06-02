@@ -29,8 +29,19 @@ body.category:not(.error404)  {
       display: inline-block !important;
     }
     .button-search-toogle {
-      .logo {
-        filter: invert(1);
+      &.navbar-abertay-scroll-show {
+        .logo {
+          filter: invert(1);
+          transition: .5s ease-in-out;
+        }
+        &:hover {
+          .logo {
+            filter: invert(0);
+          }
+        }
+      }
+      &:hover {
+        background-color: $theme_hot_pink_02;
       }
     }
     .McButton {   
