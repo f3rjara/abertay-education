@@ -26,9 +26,9 @@
           <div class="col-sm-12">
           <div class="wrapper">
             <div class="primary-content">
-              <h1>
-                <?php echo $taxo." ".apply_filters( 'the_title', $term->name ); ?>
-              </h1>
+                <h3 class="theme_purple_01_text ps-0">
+                <?php echo $taxo ?>  <span class="theme_hot_pink_01_text title-h2"><?php echo apply_filters( 'the_title', __( $term->name ) ); ?></span>
+              </h3>
               <?php if ( !empty( $term->description ) ): ?>
                 <div class="archive-description">
                   <small> <?php echo esc_html($term->description); ?> </small>
@@ -47,7 +47,7 @@
                         if( $type == 'programmes') :
                           get_template_part( 'template-parts/partials/programm_card', 'content' );
                         else : 
-                          get_template_part( 'template-parts/partials/card-single-post', 'content' );
+                          get_template_part( 'template-parts/partials/single_post_card', 'content' );
                         endif;
                         echo '</div>';
                       endwhile; 

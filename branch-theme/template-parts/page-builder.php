@@ -84,4 +84,13 @@
   if( get_row_layout() == 'sub_component_fees_table' ):
     get_template_part('template-parts/components/fess_table');
   endif;
+
+  if( get_row_layout() == 'sub_component_fees_cards' ):
+    get_template_part('template-parts/components/fees_cards');
+  endif;
+  
+  if( get_row_layout() == 'sub_component_last_resources_post' ):
+    get_template_part('template-parts/components/last_resources_post');
+  endif;
+  
   

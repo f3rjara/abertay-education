@@ -17,7 +17,7 @@ $text_bracketed  = $sub_why_abertay['text_bracketed'];
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-12 col-lg-7">
-        <h2 class="title-primary text-center mb-4"><?= $sub_why_abertay['title_primary'] ?></h2>
+        <h2 class="title-primary text-center"><?= $sub_why_abertay['title_primary'] ?></h2>
         <?php if( strlen( $sub_why_abertay['caption_text'] ) > 0 ) :?>
           <p class="caption-text mb-4 text-center">
             <?= $sub_why_abertay['caption_text'] ?>

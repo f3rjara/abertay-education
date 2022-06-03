@@ -10,7 +10,7 @@ if( ! function_exists( 'branch_theme_scripts' ) ) :
   function branch_theme_scripts() {
     global $wp_query; 
 
-    if( wp_get_environment_type() === 'development' ) {
+    if( WP_ENVIRONMENT_TYPE === 'development' ) {
       // load assets for (dev)
       wp_enqueue_script( 'jquery' );
       wp_register_script( 'branch_my_loadmore', get_stylesheet_directory_uri() . '/public/js/myloadmore.js', array('jquery') );

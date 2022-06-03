@@ -153,21 +153,59 @@ function controlesubmenuDesktop() {
   });
 }
 
+function isParent(refNode, otherNode) {
+  var parent = otherNode.parentNode;
+  do {
+    if (refNode == parent) {
+      return true;
+    } else {
+      parent = parent.parentNode;
+    }
+  } while (parent);
+  return false;
+}
+
 // Menu in Hover for Menu Desktop
 function showMenuHover() {
-  let menuPrimary = document.querySelector('.abertay-menu-desktop .dropdown .dropdown-toggle');
+  let  menuPrimary = document.querySelector('.abertay-menu-desktop .dropdown .dropdown-toggle');
+  const submenuPrimary = document.querySelector('.dropdown .dropdown-menu-primary');
   menuPrimary = menuPrimary == null ? document.querySelector('.abertay-menu-megamenu .dropdown .dropdown-toggle') : false;
-  console.log( menuPrimary );
+
   let submenus  = document.querySelectorAll('.abertay-menu-desktop .dropdown-item.is-menu-item');
   let submenusMega  = document.querySelectorAll('.abertay-menu-megamenu .dropdown-item.is-menu-item');
   let entryHover = false;
-
+  
   if ( menuPrimary) {
     if (window.innerWidth > 992) {
+      let entrySubmenuHover = false;
+
+      submenuPrimary.addEventListener( 'mouseover', function ( event ) {
+        //event.stopPropagation();
+        if (!isParent(this, event.relatedTarget) && event.target == this){ 
+          entrySubmenuHover = true;
+        }
+      });
+      submenuPrimary.addEventListener( 'mouseout', function ( event ) {
+        //event.stopPropagation();
+        if (!isParent(this, event.relatedTarget) && event.target == this){ 
+          entryHover = false;
+          entrySubmenuHover = false;
+          menuPrimary.click();
+        }
+      });
+
       menuPrimary.addEventListener( 'mouseover', function () {
         entryHover = true;
         menuPrimary.click();
       });
+
+      menuPrimary.addEventListener( 'mouseout', function () {
+        if ( !entrySubmenuHover ) {
+          entryHover = false;
+          menuPrimary.click();
+        }
+      });
+
       window.addEventListener('scroll', function() {
         if ( document.body.scrollTop > 500 || document.documentElement.scrollTop > 500 ) { 
           if ( entryHover || menuPrimary.classList.contains('show') ) {
@@ -192,7 +230,6 @@ function showMenuHover() {
       submenusMega.forEach( submenu  => {
         let goSrc = submenu.getAttribute('href');
         submenu.addEventListener('click', () => {
-          console.log( goSrc );
           location.href = goSrc;
         });
         

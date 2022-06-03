@@ -38,7 +38,7 @@
                         if( $type == 'programmes') :
                           get_template_part( 'template-parts/partials/programm_card', 'content' );
                         else : 
-                          get_template_part( 'template-parts/partials/card-single-post', 'content' );
+                          get_template_part( 'template-parts/partials/single_post_card', 'content' );
                         endif;
                         echo '</div>';
                       endwhile; 
