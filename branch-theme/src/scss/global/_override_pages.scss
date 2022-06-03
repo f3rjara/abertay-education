@@ -1,6 +1,7 @@
 body.page-template-default:not(.error404), 
 body.post-template-default:not(.error404), 
-body.search-no-results:not(.error404),
+body.search-no-results:not(.error404), 
+body.search-results:not(.error404),
 body.tax-categories_programs:not(.error404),
 body.category:not(.error404)  {
   padding-top: 90px;
@@ -29,6 +30,10 @@ body.category:not(.error404)  {
       display: inline-block !important;
     }
     .button-search-toogle {
+      .logo {
+        filter: invert(1);
+        transition: .5s ease-in-out;
+      }
       &.navbar-abertay-scroll-show {
         .logo {
           filter: invert(1);
@@ -42,6 +47,9 @@ body.category:not(.error404)  {
       }
       &:hover {
         background-color: $theme_hot_pink_02;
+        .logo {
+          filter: invert(0);
+        }
       }
     }
     .McButton {   

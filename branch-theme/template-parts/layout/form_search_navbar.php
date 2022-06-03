@@ -24,4 +24,4 @@
     </div>
   </div>
 </form>
-<div class="bg_form_abertay"></div>
+<div class="bg_form_abertay" style="background-image: url('<?php echo get_stylesheet_directory_uri().'/public/img/bg_triangle_complete.svg'; ?>');"><img class="logo_abertay" src="<?php echo get_stylesheet_directory_uri().'/public/img/abertay_ligth.svg'; ?>" alt="Abertay"></div>

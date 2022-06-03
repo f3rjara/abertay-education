@@ -134,6 +134,30 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
     
     &.active_search {
       display: block;
+      width: 55%;
+      .input-search {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        font-size: 2em;
+        color: white;
+        @media screen and (max-width:992px) {
+          font-size: 1.3em;
+        }
+      }
+      .input-group-append {
+        .btn-abertay {
+          max-height: 100%;
+          height: 70px;
+          background-color: transparent;
+          &:hover {
+            background-color: $theme_hot_pink_02;
+          }
+        }
+      }
+      @media screen and (max-width:992px) {
+        width: 95%;
+      }
     }
     @media (max-width: 992px) { 
       width: 90%;
@@ -143,6 +167,7 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
       max-height: 50px;
     }
   }
+
   .bg_form_abertay {
     position: fixed;
     display: none;
@@ -150,12 +175,50 @@ $efect_shadown: 0px 2px 2px rgba(50, 50, 71, 0.1), 0px 2px 4px rgba(50, 50, 71, 
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95);
     z-index: $zindex-popover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAN9JREFUSEvtleENAiEMRt9NoJvoCLqJG6gTOYKucBs4im5gvgQSEu+4VlD8Ab+bPvpoy0CjMzTi0sE/M99V/5XqNXAFzsB94WYH4AjsgUcu1vLGgm1CIiWcgwt6CbAR2JWC04SqYgqexjwDNGvHUrEunoO7oUpoBc/Bt4leU6VRvwc8BVfj6big3orjZVO1H0FrgecaLjt5JaqldxWyu+Ee8FT3ps3lglvBuZGxzPmbdgvYMqduuAUcV+bSyFRfmZrVG3AyfhKK054u/iS+8lVaVHdwFQNddRWNliTNVL8A3XRCH6P6Iy4AAAAASUVORK5CYII=");
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: transparent;
+      filter: invert(1);
+      border-radius: 50%;
+      border: 1px solid transparent;
+      cursor: pointer;
+      bottom: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:hover {
+      &::before {
+        border: 1px solid black;
+      }
+    }
+    @media screen and (max-width:992px) { 
+      background-size:contain;
+      background-position: top center;
+    }
+    .logo_abertay {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     &.active_search {
       display: block;
     }
   }
+
+  
+
   .navbar-collapse {
     position: fixed;
     width: 30%;
