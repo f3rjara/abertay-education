@@ -18,7 +18,7 @@ function starter_theme_body_classes( $classes ) {
   if ( ! is_active_sidebar( 'sidebar-theme-primary' ) ) {
     $classes[] = 'non-sidebar';
   }  
-  $classes[] =  wp_get_environment_type() === 'development' ? 'developmet-mode' : 'production-mode';
+  $classes[] =  WP_ENVIRONMENT_TYPE  === 'development' ? 'developmet-mode' : 'production-mode';
   return $classes;
 }
 add_filter( 'body_class', 'starter_theme_body_classes' );

@@ -21,11 +21,12 @@ endif;
       <!-- LOGO SITE MAIN -->
       <div class="col-8 col-lg-2 d-flex justify-content-start align-items-center">
         <a <?php if( !$is_landing_page ) echo 'href="/"'; ?> aria-label="Abertay Univeristy" class="target_logo">
-          <?php  if ($abertay_logo_white) {
-            echo wp_get_attachment_image($abertay_logo_white['ID'], $size, false, array('class' => "abertay_logo_white logo-navbar"));
-          }  if ($abertay_logo_color) {
-            echo wp_get_attachment_image($abertay_logo_color['ID'], $size, false, array('class' => "abertay_logo_color logo-navbar d-none"));
-          } ?>
+        <div  class="abertay_logo_white logo-navbar" 
+              style="background-image: url('<?php echo get_stylesheet_directory_uri().'/public/img/abertay_ligth.svg'; ?>');">
+        </div>
+        <div class="abertay_logo_color logo-navbar d-none"
+            style="background-image: url('<?php echo get_stylesheet_directory_uri().'/public/img/abertay_dark.svg'; ?>');">
+        </div>
         </a>
       </div>
       <!-- MAIN MENU FOR DESKTOP  -->

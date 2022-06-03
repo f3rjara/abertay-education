@@ -1,0 +1,91 @@
+.section-fees-cards {
+  .title-section, .title-caption {
+    color: $theme_purple_01;
+  }
+  .caption-text {
+    color: $theme_black;
+  }
+
+  .col-featues {
+    padding: .5em;
+    .card {
+      background-color: $white;
+      box-shadow: 0px 6px 32px 4px rgba(38, 38, 41, 0.1);
+      padding: 1.3em;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 40px;
+        .icon-feature {
+          margin-right: 15px;
+        }
+        .title-caption {
+          color: $theme_purple_03;
+          text-align: left;
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+
+      .content-date {
+        .list-features {
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          .item-list {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed $theme_gray_03;
+            
+            .title {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 31px;
+              color: $theme_purple_03;
+              display: inline-block;
+              position: relative;
+              max-width: 80%;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 6px;
+                top: 15px;
+                left: -10px;
+                transform: translateX(-100%) translateY(-50%);
+                border-radius: 50%;
+                background-color: $theme_purple_03;
+              }
+            }
+            .description {
+              font-weight: 700;
+              font-size: 38px;
+              line-height: 110%;
+              letter-spacing: 1px;
+              padding-top: 5px;
+              display: inline-block;
+              color: $theme_mint_green_01;
+              &.is_total {
+                color: $theme_hot_pink_02;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dark-mode-section {
+    .title-caption {
+      color: $theme_purple_05;
+    }
+    .caption-text, .title-section {
+      color: $theme_gray_05;
+    }
+  }
+}

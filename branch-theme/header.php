@@ -14,19 +14,27 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta content='#fff' name='theme-color'>
-    <meta content='<?php bloginfo('description'); ?>' name='description'>
-    <meta content='univa' name='keywords'>
     <meta content='website' property='og:type'>
-    <meta content='<?php wp_title('|', true, 'right'); ?>' property='og:title'>
-    <meta content='<?php bloginfo('description'); ?>' property='og:description'>
-    <meta content="<?php $featuredImage = get_field('featured_image'); echo esc_url( $featuredImage['url'] ); ?>" property="og:image"  />
+	<meta name="google-site-verification" content="ZLjCER6qLoi-jr4coX9ZeEH4tUmVMoIv358GhXA4U4k" />
+	<meta name="robots" content="index, follow"/>
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
+	<!-- <script id="Cookiebot" src=https://consent.cookiebot.com/uc.js data-cbid="f883502d-cbe4-48d1-8e34-5681df5c56dd" data-blockingmode="auto" type="text/javascript"></script> -->
+	<!-- Google Tag Manager -->
+		<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MNSDXHT');</script> -->
+	<!-- End Google Tag Manager -->
     <?php wp_head(); ?>
   </head>
 
 <body <?php body_class(); ?> data-page-handle="<?php echo $_SERVER['REQUEST_URI']; ?>" >
-
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNSDXHT"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
   <header class="header-site">
     <?php  
       $abertay_menu_hamburger = get_field('abertay_menu_hamburger', 'options');

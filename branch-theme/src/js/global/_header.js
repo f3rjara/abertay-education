@@ -175,7 +175,6 @@ function showMenuHover() {
   let submenusMega  = document.querySelectorAll('.abertay-menu-megamenu .dropdown-item.is-menu-item');
   let entryHover = false;
   
-  console.log( menuPrimary );
   if ( menuPrimary) {
     if (window.innerWidth > 992) {
       let entrySubmenuHover = false;
@@ -197,7 +196,6 @@ function showMenuHover() {
 
       menuPrimary.addEventListener( 'mouseover', function () {
         entryHover = true;
-        console.table({entryHover, entrySubmenuHover});
         menuPrimary.click();
       });
 
@@ -206,12 +204,7 @@ function showMenuHover() {
           entryHover = false;
           menuPrimary.click();
         }
-        console.table({entryHover, entrySubmenuHover});
       });
-
-      console.log( entrySubmenuHover );
-      
-
 
       window.addEventListener('scroll', function() {
         if ( document.body.scrollTop > 500 || document.documentElement.scrollTop > 500 ) { 
@@ -237,7 +230,6 @@ function showMenuHover() {
       submenusMega.forEach( submenu  => {
         let goSrc = submenu.getAttribute('href');
         submenu.addEventListener('click', () => {
-          console.log( goSrc );
           location.href = goSrc;
         });
         

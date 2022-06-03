@@ -73,8 +73,13 @@
           }
           &:hover {
             background-color: transparent;
-            color: $theme_mint_green_02;
+            color: $white;
             border-bottom: 2px solid $theme_mint_green_02;
+          }
+          &:active {
+            background-color: transparent;
+            color: $theme_hot_pink_01;
+            border-bottom: 2px solid $theme_hot_pink_01;
           }
         }
       }

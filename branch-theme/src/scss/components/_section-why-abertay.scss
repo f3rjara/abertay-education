@@ -1,6 +1,10 @@
 .section-why-abertay {
   .title-primary {
     color: $theme_purple_02;
+    margin-bottom: 45px;
+    @media screen and (max-width: 992px) { 
+      margin-bottom: 25px;
+    }
   }
   .row-features {
     .col-feature {
