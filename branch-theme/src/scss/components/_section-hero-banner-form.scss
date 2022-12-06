@@ -93,4 +93,76 @@
       }
     }
   }
+  /*Box dates*/
+  .box-apply-date{
+    margin-top: 30px;
+    max-width: 530px;
+
+    .container-apply-date{
+      display: flex;
+      background: #C01F73;
+      -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.25);
+      -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.25);
+      box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.25);
+      padding: 20px 0px;
+      
+    }
+
+    .block-apply-date{
+      width: 50%;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .second-block-apply-date{
+      border-left: 1px solid #FFFFFF;
+    }
+
+    .title-apply-date{
+      margin: 0;
+      font-family: 'TeX Gyre Adventor';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 10px;
+      color: #FFFFFF;
+    }
+
+    .content-apply-date{
+      margin: 0;
+      font-family: 'TeX Gyre Adventor';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 37px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 767px) { 
+      margin-top: 20px;
+      max-width: 100%;
+      margin-bottom: 80px;
+
+      .container-apply-date{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 10px 0px;
+      }
+
+      .title-apply-date{
+        font-size: 15px;
+        padding-top: 5px;
+      }
+
+      .content-apply-date{
+        font-size: 16px;
+      }
+    }
+  }
+
 }

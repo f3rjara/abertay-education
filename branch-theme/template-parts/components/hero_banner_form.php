@@ -66,6 +66,29 @@
                   <?= $content['text_caption'] ?>
               </h4>
             <?php endif;
+            if( $content['acf_fc_layout'] == 'flex_apply_start_date') : ?>
+              <div class="box-apply-date">
+                <div class="container-apply-date">
+                  <div class="block-apply-date">
+                    <p class="title-apply-date" >
+                      Apply By
+                    </p>
+                    <p class="content-apply-date" >
+                      <?= $content['apply_by'] ?>
+                    </p>
+                  </div> 
+                  <div class="block-apply-date second-block-apply-date">
+                    <p class="title-apply-date" >
+                      To Start
+                    </p>
+                    <p class="content-apply-date" >
+                      <?= $content['to_start'] ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            <?php endif;
             if( $content['acf_fc_layout'] == 'flex_repeater_features') :  
                 $features = $content['repeater_features'];
                 if( $features ) : ?>
@@ -77,7 +100,7 @@
                       </li>
                     <?php endforeach; ?>                
                   </ul>
-            <?php endif;
+                <?php endif;
             endif;
           endforeach;
         ?>
